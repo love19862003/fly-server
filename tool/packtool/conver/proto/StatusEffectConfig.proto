@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message StatusEffectConfig {
+	optional int32 id = 1; // 
+	optional int32 effect = 3; // 
+}

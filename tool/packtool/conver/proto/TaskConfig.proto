@@ -1,0 +1,18 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message TaskConfig {
+	repeated int32 open_task = 10; // 
+	optional int32 rarity = 4; //作者:任务品质目前用于日常任务刷新若任务有特殊显示也在此处进行规范和配置 
+	optional int32 id = 1; // 
+	optional int32 task_id = 2; //作者:首位 1-主线 2-支线 3-日常2~4位 接受等级5~6位 任务序列 
+	optional string desciption = 6; // 
+	optional int32 jump_value = 13; // 
+	optional int32 task_type = 3; //作者:1-主线任务2-支线任务3-日常任务 
+	optional string name = 5; // 
+	optional int32 jump_type = 12; //作者:-1、元宝消费1、关卡2、无3、升级4、征战5、抽卡6、典藏7、矿场8、集市9、聚宝盆10、特惠11、主线任务12、好友13、商城充值 
+	optional int32 last_task = 11; // 
+	repeated ConfigTypeGroup complete_condition = 8; //作者:完成条件condition1,para;condition2,para;... 
+	optional int32 active_level = 7; //作者:接受条件condition1,para;condition2,para;... 
+	repeated ConfigTypeGroup bonus = 9; // 
+}

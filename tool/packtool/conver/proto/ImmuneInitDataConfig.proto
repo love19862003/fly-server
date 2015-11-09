@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ImmuneInitDataConfig {
+	optional int32 id = 1; // 
+	repeated int32 immune_buff_type = 2; //作者:buff_type_id1,buff_type_id2,…该ID为bufftype中的type_id非基本类型 
+}

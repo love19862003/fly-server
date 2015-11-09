@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="db">
+      <UniqueIdentifier>{78fac94c-fa35-46b9-94fe-e1e5f93c0acb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\database\CMakeLists.txt">
+      <Filter>db</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\database\MysqlThread.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\MysqlTask.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\RedisManager.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\MysqlManager.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\RedisThread.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\RedisTask.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\database\Task.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\TaskPool.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\TaskThread.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\MysqlDefine.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\DBManager.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\RedisManager.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\MysqlManager.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\RedisDefine.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\BindMysqlToLua.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\BindRedisToLua.h">
+      <Filter>db</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

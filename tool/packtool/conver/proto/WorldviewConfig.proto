@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message WorldviewConfig {
+	optional int32 id = 1; // 
+	optional int32 illustration_pic = 4; // 
+	optional string desc = 2; // 
+}

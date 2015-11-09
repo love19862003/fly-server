@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message TotalDamageBonusConfig {
+	optional int32 id = 1; // 
+	optional int32 max_rank = 3; // 
+	optional int32 min_rank = 2; // 
+	repeated ConfigTypeGroup bonus = 4; // 
+}

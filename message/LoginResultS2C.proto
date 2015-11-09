@@ -1,0 +1,13 @@
+package Pro;
+import "PlayerDataS2C.proto";
+message LoginResultS2C{
+  enum Error{
+    NO_ERROR_CODE = 1;
+    PASSWORD_ERROR = 2;
+    LOCKED = 3;
+  }
+  optional Error error = 1;
+  optional string gate = 2;
+  optional uint32 session = 3;
+  optional PlayerData data = 4;
+}

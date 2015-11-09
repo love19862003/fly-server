@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message activity_oddsConfig {
+	optional int32 currency_type_originalprice = 4; // 
+	optional int32 cost_originalprice = 5; // 
+	optional int32 currency_type = 2; // 
+	optional int32 cost = 3; // 
+	optional int32 id = 1; // 
+	repeated int32 bonus = 6; // 
+}

@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message EquipmentImproveCostConfig {
+	optional int32 bonus_rate = 2; // 
+	optional int32 id = 1; // 
+	optional int32 decoration_cost = 5; // 
+	optional int32 armor_cost = 4; // 
+	optional int32 weapon_cost = 3; // 
+}

@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message UnitDamageIncConfig {
+	repeated int32 max_damage_inc = 5; //作者:最大伤害加成 
+	repeated int32 step = 6; //作者:随机步长 
+	optional int32 id = 1; // 
+	repeated int32 unit_count = 2; //作者:抽取卡牌数量 
+	repeated int32 min_damage_inc = 4; //作者:最小伤害加成 
+	repeated ConfigTypeGroup units = 3; //作者:unit_root_id 
+}

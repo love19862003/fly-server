@@ -1,0 +1,10 @@
+package Pro;
+message GateS2C{
+  enum GateState{ 
+    OK = 1;
+    SERVER_CLOSE = 2;
+  }
+  optional string gate = 1;
+  optional uint32 port = 2;
+  optional GateState state = 3;
+}

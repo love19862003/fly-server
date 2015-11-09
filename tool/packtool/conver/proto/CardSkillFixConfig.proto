@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CardSkillFixConfig {
+	optional int32 id = 1; // 
+	optional int32 power_add = 4; // 
+	optional int32 card_max_rank = 2; // 
+	optional int32 fix_value = 3; // 
+}

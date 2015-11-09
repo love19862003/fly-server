@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Arena_RewardConfig {
+	optional int32 lose_coins = 6; //赵文:失败铜钱 
+	repeated int32 drop = 2; //赵文:胜利掉落 
+	optional int32 id = 1; // 
+	optional int32 points = 3; //赵文:胜利基础积分 
+	optional int32 lose_points = 5; //赵文:失败积分 
+	optional int32 coins = 4; //赵文:胜利基础铜钱 
+}

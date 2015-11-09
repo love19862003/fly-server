@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message DailyTaskInitDataConfig {
+	repeated ConfigTypeGroup rate2 = 4; // 
+	optional int32 id = 1; // 
+	repeated ConfigTypeGroup rate3 = 5; // 
+	repeated ConfigTypeGroup rate1 = 3; //作者:刷新权重rare1,权重;rare2,权重;... 
+	optional int32 daily_refresh_count = 2; //作者:本日已刷新次数该刷新次数每日0:00重置 
+}

@@ -1,0 +1,17 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SequenceAnimsConfig {
+	optional int32 offsety = 5; // 
+	optional int32 id = 1; // 
+	optional int32 duration = 12; //作者:1000/FPS 
+	repeated int32 plists = 8; // 
+	optional string folder = 2; // 
+	optional int32 isloop = 13; //作者:0 不循环1 循环 
+	optional int32 to = 11; // 
+	optional int32 from = 10; // 
+	optional string pattern = 9; // 
+	optional int32 offsetx = 4; // 
+	optional int32 scale = 7; // 
+	optional int32 is_flip_y = 6; // 
+}

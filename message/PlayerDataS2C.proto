@@ -1,0 +1,131 @@
+package Pro;
+message AccountData{
+    optional uint32 pid = 1;
+    optional string name = 2;
+    optional string password = 3;
+    optional string channel = 4;
+    optional string downChannel = 5;
+    optional string nickName = 6;
+    optional uint32 totalLogin = 7;
+    optional uint32 createTime = 8;
+    optional string cell = 9;
+}
+//基础数据
+message PlayerBase{
+    optional uint32 level = 1;
+    optional uint32 coin = 2;
+    optional uint32 money = 3;
+    optional uint32 freeMoney = 4;
+    optional uint32 power = 5;
+    optional uint32 token = 6;
+}
+//道具
+message Item{
+    optional uint32 id = 1;
+    optional uint32 config = 2;
+}
+message PlayerItems{
+    repeated Item items = 1;
+}
+//任务
+message Quest{
+    optional uint32 id = 3;
+    optional uint32 config = 1;         //id
+    optional uint32 progress = 2;       //进度
+}
+message PlayerQuest{
+    repeated Quest quests = 1;              //进行中任务
+    repeated uint32 doneQuests = 2;         //完成的任务
+    repeated Quest achievement = 3;
+    repeated uint32 doneAchievement = 4;
+}
+//日常数据
+message PlayerDaily{
+    
+}
+//商店
+message ShopCell{
+    optional uint32 id = 1;
+    optional uint32 config = 2;
+}
+
+message Store{
+    enum StoreType{
+        Type_Normal = 1;
+    }
+    repeated ShopCell cells = 1;            //商品
+    optional StoreType type = 2;            //商店类型
+    optional uint32 nextRefreshTime = 3;    //下次刷新时间
+}
+message StoreRecord{
+ message Record{
+    optional uint32 id = 1;                 //道具ID
+    optional uint32 count = 2;              //购买数量
+    optional uint32 last_time = 3;          //最后购买时间
+ }
+ optional Store.StoreType type = 1;         //商店类型
+ repeated Record record = 2;
+}
+message PlayerStore{
+    repeated Store store = 1;               //商店数据
+    repeated StoreRecord record = 2;        //购买记录
+}
+//基础数据
+message PlayerData{
+    optional uint32 id = 1;
+    optional PlayerBase base = 2;       //基础数据
+    optional PlayerItems items = 3;     //道具信息
+    optional PlayerQuest quest = 4;     //任务信息
+    optional PlayerDaily daily = 5;     //日常信息
+    optional PlayerStore store = 6;     //商店信息
+}
+// 
+message PlayerSync{
+    enum Action{
+        _ADD_ = 1;
+        _UPDATE_ = 2;
+        _REMOVE_= 3;
+    }
+    //道具更新
+    message ItemSyncData{
+        message ItemSync{
+            optional Item item = 1;
+            optional Action action = 2;
+        }
+        repeated ItemSyncData data = 1;
+    }
+    //任务更新
+    message QuestSyncData{
+        message QuestSync{
+            optional uint32 Quest = 1;
+            optional Action action = 2;
+        }
+        repeated QuestSync data = 1;
+        repeated uint32 done = 2;
+        
+        repeated QuestSync achievement = 3;
+        repeated uint32 doneAchievement = 4;
+    }
+    //日常更新
+    message DailySyncData{
+        optional bool bSync = 1;
+        optional PlayerDaily data = 2;
+    }
+    //商店更新
+    message  StoreSyncData{
+        message StoreRecordSync{
+            optional Action action = 1;  //道具
+            repeated StoreRecord.Record record = 2; //更新记录
+            optional Store.StoreType type = 3;      //商店类型
+        }
+        
+        repeated StoreRecordSync record = 1;    //更新商店购买记录
+        repeated Store store = 2;   //更新商店数据
+    }
+    //
+    optional PlayerBase base = 1;
+    optional ItemSyncData item = 2;
+    optional QuestSyncData quest = 3;
+    optional DailySyncData daily = 4;
+    optional StoreSyncData store = 5;
+}

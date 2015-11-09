@@ -1,0 +1,17 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ChapterConfig {
+	repeated int32 map_flag_boss = 7; // 
+	optional int32 stage_effect = 12; //作者:1飘云2打雷3下雨4下雪 
+	optional int32 id = 1; // 
+	repeated ConfigTypeGroup checkpoint_pos = 11; // 
+	repeated ConfigTypeGroup stage_type2_order = 5; // 
+	repeated int32 map_flag_hide = 6; // 
+	repeated int32 checkpoint_icons = 10; //作者:关卡建筑资源ID 
+	optional string chapter_name = 2; // 
+	optional int32 map_line_res = 9; // 
+	optional int32 auto_next_chapter = 3; //作者:新章节自动跳转的关卡 
+	optional int32 map_res = 8; // 
+	repeated ConfigTypeGroup stage_type1_order = 4; // 
+}

@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message DailyEventConfig {
+	optional int32 id = 1; // 
+	optional int32 open_time = 3; // 
+	optional int32 close_time = 4; // 
+	optional int32 activity_id = 2; // 
+}

@@ -1,0 +1,20 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message AchievementConfig {
+	optional int32 open_task = 11; // 
+	optional int32 pre_task = 10; // 
+	optional int32 isopen = 14; // 
+	optional int32 id = 1; // 
+	optional int32 jump_value = 16; // 
+	optional int32 condition = 7; // 
+	optional string desc = 6; // 
+	optional int32 jump_type = 15; //作者:-1、元宝消费1、关卡2、无3、升级4、征战5、抽卡6、典藏7、矿场8、集市9、聚宝盆10、特惠11、主线任务12、好友13、商城充值 
+	optional int32 condition_para = 8; // 
+	optional string name = 5; // 
+	optional int32 is_vip = 3; // 
+	optional int32 achievement_point = 9; // 
+	optional int32 sheet_type = 4; // 
+	optional int32 active_level = 13; // 
+	repeated ConfigTypeGroup bonus = 12; // 
+}

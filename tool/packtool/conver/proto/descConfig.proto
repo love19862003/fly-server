@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message descConfig {
+	optional int32 id = 1; // 
+	optional string desc = 2; // 
+}

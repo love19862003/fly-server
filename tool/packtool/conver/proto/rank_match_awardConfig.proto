@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message rank_match_awardConfig {
+	optional int32 type = 5; //陆阳:1、每天固定结算奖励2、历史结算奖励 
+	optional int32 min_rank = 2; //陆阳:最小排名 
+	optional int32 id = 1; // 
+	optional int32 max_rank = 3; //陆阳:最大排名 
+	repeated int32 award = 4; //陆阳:奖励 
+}

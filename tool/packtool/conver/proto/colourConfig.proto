@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message colourConfig {
+	optional int32 id = 1; // 
+	optional string word_colour = 3; // 
+	optional string desc = 2; // 
+}

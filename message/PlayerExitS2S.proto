@@ -1,0 +1,9 @@
+package Pro;
+message PlayerExitS2S{
+  enum Reason{
+    Net_DISCONNECT = 1;
+  }
+  optional Reason reason = 1;
+  optional string server = 3;
+  optional uint32 session = 2;
+}

@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message WeekLivenessConfig {
+	optional int32 id = 1; // 
+	repeated ConfigTypeGroup bonus = 4; // 
+	optional int32 min_liveness = 2; // 
+	optional int32 max_liveness = 3; // 
+}

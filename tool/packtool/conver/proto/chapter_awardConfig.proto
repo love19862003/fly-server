@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message chapter_awardConfig {
+	optional int32 chapter = 2; // 
+	optional int32 type = 5; //作者:区分每个章节哪个宝箱 
+	repeated int32 drop = 4; // 
+	optional int32 id = 1; // 
+	optional int32 star = 3; // 
+}

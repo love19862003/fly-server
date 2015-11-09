@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PvpScoreBonusConfig {
+	optional int32 score_min = 2; // 
+	optional int32 type = 5; //作者:1、日积分奖励2、赛级积分奖励 
+	repeated int32 drops = 4; // 
+	optional int32 id = 1; // 
+	optional int32 score_max = 3; // 
+}

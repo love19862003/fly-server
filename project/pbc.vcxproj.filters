@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{aa230bd6-7da2-4cfb-af39-52310e429716}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\pbc-master\src\alloc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\array.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\bootstrap.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\context.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\decode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\map.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\pattern.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\pbc-lua53.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\proto.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\register.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\rmessage.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\stringpool.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\varint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pbc-master\src\wmessage.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pbc-master\src\alloc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\array.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\bootstrap.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\context.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\descriptor.pbc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\map.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\pattern.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\proto.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\stringpool.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\src\varint.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pbc-master\pbc.h" />
+    <ClInclude Include="..\pbc-master\pbc-lua.h" />
+  </ItemGroup>
+</Project>

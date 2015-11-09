@@ -1,0 +1,20 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message store_itemConfig {
+	optional int32 vip_buy_lv = 3; //VIP等级达到多少级别后可以购买该道具，所有VIP等级都可以购买填写-1 
+	optional int32 vip_limit_add = 5; //VIP玩家在购买该道具时的购买次数加成对应VIP表中Vip_privilege标签内的ID 
+	optional int32 show_currency_type = 11; //展示商品的货币类型 
+	optional int32 vip_show_lv = 6; //多少级的VIP玩家才能看到该道具 
+	optional int32 id = 1; // 
+	optional int32 weight = 15; //每一样商品在某个商店内的权重，权重越高出现概率越高 
+	optional int32 buy_price = 12; //该商品实际出售价格值 
+	optional int32 add_cost = 14; //该道具连续购买时价格的变化，若该道具出售价格没有增张则填写0，反之填写有效的COST_type_id 
+	optional int32 buy_currency_type = 13; //该商品实际出售时的货币类型 
+	optional int32 show_price = 10; //展示商品的出售价格 
+	optional int32 drop = 9; //商店道具，配置成掉落包，掉落包内配置规则type，item，count对应：物品类型,item_id,购买成功后获得的该道具数量对应掉落包表内的ID 
+	optional int32 min_level = 7; // 
+	optional int32 buy_daily_limit = 4; //每天可以购买该道具的基础值 
+	optional int32 max_level = 8; // 
+	optional int32 store_type = 2; //物品所属商店类型 
+}

@@ -1,0 +1,45 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message UnitConfig {
+	repeated int32 unit_xy = 9; //作者:首位：缩放系数第二位：X坐标第三位：Y坐标1,1,1 
+	optional int32 grown_id = 19; //关联到UnitGrown的ID 
+	optional int32 can_dismantle = 32; // 
+	optional int32 skill = 24; //武将主动技ID 
+	optional int32 currency_type = 33; //货币类型1- 铜钱2- 元宝 
+	repeated int32 dismantle_data = 35; //支付卡牌得到的物品ID对应item 中的Drop标签里的ID 
+	optional int32 dismantle_cost = 34; //分解卡牌支付的货币数量 
+	optional int32 is_exp_card = 3; // 
+	optional int32 card_rank = 12; //开牌默认突破次数 
+	optional int32 unit_head_pic = 5; //武将头像资源 
+	optional int32 battle_head = 7; //武将头像资源 
+	optional int32 unit_type = 11; //作者:1-步兵2-骑兵3-弓兵 
+	repeated int32 fast_connect = 39; //武将专属装备所掉落的副本ID 
+	optional int32 active_equipment = 27; // 
+	repeated int32 activate_units = 25; //填写武将缘卡牌，unit_root的ID 
+	optional int32 card_improve = 41; // 
+	optional int32 max_level = 14; //卡牌最高等级 
+	optional int32 attr_type = 18; //第一位填写卡牌的星级第二位填写开牌的兵种类型 
+	optional string equip_name = 28; // 
+	optional int32 unit_root = 2; //作者:从属卡首位: 1-卡牌2位: 国家 1-魏, 2-蜀, 3-吴, 4-群3~4位: 星级5~6位: 序列 
+	repeated int32 unit_dubbing = 38; // 
+	optional string unit_cardname = 17; //武将名称 
+	optional string unit_name = 4; //武将名称 
+	optional int32 unit_show = 10; //卡牌图片 
+	repeated int32 card_puzzle_drop = 42; // 
+	optional int32 card_max_rank = 13; //卡牌最大突破次数 
+	optional int32 unit_pic = 6; //卡牌图片 
+	optional string country = 22; //武将所属国家 
+	optional int32 id = 1; //作者:首位: 卡牌2位: 国家3~4位: 星级5~6位: 卡牌源序列7~8位: 在本组卡中的序列 
+	repeated ConfigTypeGroup card_droup = 40; //整卡掉落ID；卡碎掉落ID；抽卡（8888888）缺损情况下填写：0 
+	optional string card_pathway = 37; //作者:卡牌翻转获得途径信息 
+	optional int32 gain_exp = 30; // 
+	optional int32 talent = 29; //被动技能ID 
+	optional int32 config = 20; //关联到UnitInitData中的ID 
+	optional int32 combined_skill = 26; //卡牌的组合技能ID 
+	optional int32 country1 = 23; //国家编号 
+	optional int32 lead_cost = 15; //领导力 
+	optional string description = 21; //武将描述 
+	optional int32 skill_level_max = 16; //技能最大等级 
+	optional int32 battle_pic = 8; //武将头像资源 
+}

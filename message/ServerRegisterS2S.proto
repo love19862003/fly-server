@@ -1,0 +1,15 @@
+package Pro;
+message ServerRegisterS2S{
+  enum ServerType{
+    GATE = 1;
+    GAME = 2;
+    CELL = 3;
+  };
+  optional string server = 1;     //服务器名字
+  optional int32 port = 2;      //端口
+  optional int32 online = 3;      //在线人数
+  optional string address = 4;    //地址
+  optional string timeZone = 5;   //时区信息
+  optional uint32 time = 6;     //注册时间
+  optional ServerType type = 7;
+}

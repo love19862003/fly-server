@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ConditionConfig {
+	optional int32 id = 1; // 
+	optional int32 type = 2; // 
+	optional string desc = 4; // 
+	repeated int32 para = 3; // 
+}

@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message rank_match_robotConfig {
+	optional int32 minrank = 2; // 
+	repeated ConfigTypeGroup card = 5; // 
+	optional int32 id = 1; // 
+	optional int32 level = 4; // 
+	optional int32 maxrank = 3; // 
+}

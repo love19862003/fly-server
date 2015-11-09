@@ -1,0 +1,10 @@
+package Pro;
+message LoginC2S{
+  optional string name = 1;
+  optional string password = 2;
+  optional string channel = 3;
+  optional string downChannel = 4;
+  optional uint32 session = 5;
+  optional string gate = 6;
+  optional string version = 7;
+}

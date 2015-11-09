@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SystemOpenConfig {
+	optional int32 id = 1; // 
+	optional string system_desc = 2; // 
+	optional int32 type = 3; //作者:0代表等级开启1代表任务开启2代表关卡通关 
+	optional int32 type_value = 4; // 
+}

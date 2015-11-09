@@ -1,0 +1,12 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PropTypeConfig {
+	optional string showformat = 4; // 
+	optional string name = 2; // 
+	optional int32 imageid = 3; // 
+	optional int32 id = 1; // 
+	optional string showformat1 = 5; // 
+	optional int32 rate = 6; // 
+	optional string desc = 7; // 
+}

@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message BattleHelpConfig {
+	optional int32 type = 2; //作者:0：buff1：特殊行为 
+	optional string name = 3; // 
+	optional int32 id = 1; // 
+	optional int32 icon = 5; // 
+	optional string content = 4; // 
+	optional int32 pos = 6; //作者:0：中间1：右上角 
+}

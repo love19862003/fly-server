@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message MoneytreeConfig {
+	optional int32 base_chance = 2; //本次摇钱树暴击的基本概率 
+	optional int32 add_chance = 3; //如果本次未暴击增加的暴击率，该值会累计，若本次出现暴击后将此暴击率清零。 
+	optional int32 id = 1; //对应玩家的等级 
+	optional int32 vip_currency_add_count = 6; //出现暴击后额外获得的铜钱，适用与VIP玩家出现暴击后的产量=base_currency_count+normal_currency_add_count 
+	optional int32 normal_currency_add_count = 5; //出现暴击后额外获得的铜钱，适用与普通玩家出现暴击后的产量=base_currency_count+normal_currency_add_count 
+	optional int32 base_currency_count = 4; //基础获得的铜钱数 
+}

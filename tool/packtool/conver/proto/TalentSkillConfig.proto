@@ -1,0 +1,13 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message TalentSkillConfig {
+	optional string skill_name = 2; // 
+	optional string d3 = 6; // 
+	optional string skill_description = 3; // 
+	optional string d1 = 4; //作者: n1 普通攻击 n2 力量 n3 智力 n4 统帅 n5 生命 
+	optional int32 id = 1; //作者:首位 国家2位 星级3~4位 卡牌序列5~6位 技能序列 
+	optional int32 talent_limit_add = 8; // 
+	optional int32 para = 7; // 
+	optional string d2 = 5; // 
+}

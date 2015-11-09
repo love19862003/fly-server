@@ -1,0 +1,19 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message BattleInitDataConfig {
+	optional int32 battle_cost = 3; // 
+	optional int32 challenge = 5; // 
+	optional int32 search_cost = 2; // 
+	optional int32 id = 1; // 
+	optional int32 search_rank_count = 9; //作者:积分区间段上下 
+	optional int32 revenge_cost = 10; //作者:复仇消耗 
+	optional int32 hide_score = 14; //作者:叠加连败积分 
+	optional int32 robot_score_diff = 11; //作者: 机器人分差（300）自身积分-分差=机器人积分500-300=200 
+	optional int32 base_rank_point = 4; // 
+	optional int32 level_reduce = 7; // 
+	optional int32 robot_talent_point = 13; //作者:机器人携带计略点 
+	optional int32 robot_coin = 12; //作者:机器人携带金钱 
+	optional int32 rest_date = 6; // 
+	optional int32 level_increase = 8; // 
+}

@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message FramesConfig {
+	optional int32 id = 1; //作者:千位1=魏国，2=蜀国，3=吴国，4=群雄 
+	optional int32 plist = 2; // 
+	optional string playstates = 3; // 
+}

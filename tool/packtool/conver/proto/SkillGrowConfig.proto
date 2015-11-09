@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SkillGrowConfig {
+	optional int32 max_level = 4; // 
+	optional int32 id = 1; // 
+	optional int32 min_level = 3; // 
+	repeated int32 rate = 5; //作者:每个技能概率万分比 
+	optional int32 skill_id = 2; // 
+}

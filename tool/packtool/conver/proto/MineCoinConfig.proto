@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message MineCoinConfig {
+	optional int32 id = 1; //等级 
+	optional int32 miner_loyalty = 4; // 
+	optional int32 mine_owener_get = 3; //作者:每分钟可获得铜钱 
+	optional int32 miner_get = 2; //作者:每分钟可获得铜钱 
+}

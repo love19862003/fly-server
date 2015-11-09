@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message UnitEffectConfig {
+	optional int32 id = 1; // 
+	optional int32 attack_unit = 2; // 
+	optional int32 atk_rate = 4; // 
+	optional int32 target_unit = 3; // 
+}

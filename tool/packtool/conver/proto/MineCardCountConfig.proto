@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message MineCardCountConfig {
+	optional int32 id = 1; //作者:官爵 
+	optional int32 max_card_count = 2; // 
+	optional int32 max_mine_count = 3; // 
+}

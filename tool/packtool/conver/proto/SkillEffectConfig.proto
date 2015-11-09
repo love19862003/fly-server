@@ -1,0 +1,15 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SkillEffectConfig {
+	optional int32 is_src_flip_y = 7; //作者:0不翻转1翻转 
+	optional int32 id = 1; //作者:首位 国家2位 星级3~4位 卡牌序列5~6位 技能序列 
+	optional int32 selft_effect_time = 3; //作者:毫秒 1000=1秒 
+	optional int32 target_effect_time = 6; // 
+	optional int32 is_dst_flip_y = 8; //作者:0不翻转1翻转 
+	optional int32 is_shake = 9; //作者:0=不震屏1=震屏 
+	optional int32 self_effect = 2; //作者:SRC 
+	optional int32 target_effect = 4; //作者:dst 
+	optional int32 damage_times = 10; // 
+	optional int32 sound_effect = 11; //标准 1火系 2水系 3电系 4毒系 5回复 6连锁 7防护 8 
+}

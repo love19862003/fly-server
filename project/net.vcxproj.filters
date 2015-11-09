@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="uv">
+      <UniqueIdentifier>{5bf342b8-abfd-4b8e-82b0-7c337ae0af18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uv\include">
+      <UniqueIdentifier>{ba054eda-9789-4f3f-ba35-fb60fd25853e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uv\win">
+      <UniqueIdentifier>{358f39c5-c102-42ef-8e0a-0cd3db42dc0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\net\NetManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\queue.h">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\uv-common.h">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\pthread-fixes.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\stdint-msvc2008.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\tree.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-bsd.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-darwin.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-errno.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-linux.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-sunos.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-unix.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\include\uv-win.h">
+      <Filter>uv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\atomicops-inl.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\handle-inl.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\internal.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\req-inl.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\stream-inl.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\winapi.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\win\winsock.h">
+      <Filter>uv\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetCore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetMessage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetSession.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetThread.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetUV.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\NetService.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\libuv\src\heap-inl.h">
+      <Filter>uv</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\net\NetManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\fs-poll.c">
+      <Filter>uv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\inet.c">
+      <Filter>uv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\uv-common.c">
+      <Filter>uv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\version.c">
+      <Filter>uv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\async.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\core.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\dl.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\error.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\fs.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\fs-event.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\getaddrinfo.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\handle.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\loop-watcher.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\pipe.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\poll.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\process.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\process-stdio.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\req.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\signal.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\stream.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\tcp.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\thread.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\timer.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\tty.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\udp.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\util.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\winapi.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\winsock.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\NetService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\NetMessage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\threadpool.c">
+      <Filter>uv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\libuv\src\win\getnameinfo.c">
+      <Filter>uv\win</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SkillExpConfig {
+	optional int32 id = 1; // 
+	optional int32 skill_level = 2; // 
+	optional int32 skill_exp = 3; // 
+	optional int32 total_exp = 4; // 
+}

@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message activity_consume_moneyConfig {
+	optional int32 act_same_index = 5; // 
+	repeated int32 drop = 3; // 
+	optional int32 id = 1; // 
+	optional int32 data = 4; //作者:消耗元宝 
+	optional int32 activity_id = 2; // 
+}

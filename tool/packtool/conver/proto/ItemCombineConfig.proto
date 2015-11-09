@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ItemCombineConfig {
+	optional int32 id = 1; // 
+	optional int32 target_item = 3; // 
+	repeated ConfigTypeGroup consume = 2; // 
+	optional int32 count = 4; // 
+}

@@ -1,0 +1,12 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message activity_commodityConfig {
+	optional int32 commodity_id = 3; //吴凡:商品ID 
+	optional int32 drop_id = 5; //吴凡:掉落ID 
+	optional int32 act_same_index = 7; // 
+	optional int32 id = 1; // 
+	optional int32 drop_condition = 4; //吴凡: 
+	optional int32 activity_type = 6; //吴凡:活动类型 
+	optional int32 activity_id = 2; // 
+}

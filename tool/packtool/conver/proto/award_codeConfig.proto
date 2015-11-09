@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message award_codeConfig {
+	optional int32 type = 2; // 
+	optional int32 item = 3; // 
+	optional int32 id = 1; // 
+	optional string content = 4; // 
+	optional string title = 5; // 
+}

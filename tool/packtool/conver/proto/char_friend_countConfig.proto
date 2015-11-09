@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message char_friend_countConfig {
+	optional int32 id = 1; // 
+	optional int32 friend_max_count = 2; // 
+}

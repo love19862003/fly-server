@@ -1,0 +1,21 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message TalentConfig {
+	optional int32 max_level = 5; //技能允许提升的最大等级 
+	optional int32 talent_point = 7; //升级所需消耗的天赋点数 
+	optional int32 talent_root = 3; // 
+	optional int32 talent_cost_type = 8; //升级所需的货币类型 
+	optional int32 id = 1; // 
+	optional int32 type = 10; //1：攻击系2：防御系3：通用系 
+	optional int32 skill = 11; //1.初始天赋技能的ID序号，对应技能表内的ID 
+	optional int32 condition_talent = 14; //天赋开启前置条件：该系的某个天赋技能达到X等级时。缺损时填写：0 
+	optional int32 talent_next_level_time = 15; //升级所需耗时：秒 
+	optional int32 next_id = 2; // 
+	optional int32 total_talent_point = 13; //天赋开启前置条件：该系的天赋已分配点数达到X点。缺损时填写：0 
+	optional int32 clear_cd_cost = 16; //消除CD所需元宝数 
+	optional int32 player_level = 12; //天赋开启前置条件：天赋开放等级。缺损时填写：0 
+	optional int32 level = 4; //技能当前等级 
+	optional int32 cost = 9; //消耗的货币数量 
+	optional int32 background = 6; //填写规范：参数1~31：代表阶段1的天赋底图2：代表阶段2的天赋底图 
+}

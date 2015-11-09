@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message friend_leadershipConfig {
+	optional int32 id = 1; // 
+	optional int32 leadership_add = 3; // 
+	optional int32 friend_count = 2; // 
+}

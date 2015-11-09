@@ -1,0 +1,12 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Bank_levelup_timeConfig {
+	optional int32 player_lv = 7; //对应玩家等级 
+	optional int32 money_cost = 5; //升级所需铜钱 
+	optional int32 clear_cd_cost = 6; //清除CD所需元宝 
+	optional int32 id = 1; //当前等级 
+	optional int32 next_level_time = 2; //升级所需耗时：秒 
+	optional int32 max_point = 3; //当前仓库存放辎重的上限 
+	optional int32 bank_max_rate = 4; //保护被掠夺时现存辎重的损失比例（万分比） 
+}

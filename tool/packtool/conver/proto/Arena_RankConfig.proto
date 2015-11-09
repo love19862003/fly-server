@@ -1,0 +1,16 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Arena_RankConfig {
+	optional int32 rank_min_lv = 2; // 
+	optional int32 search_add_cost = 5; //赵文:购买搜索次数（元宝） 
+	optional int32 id = 1; // 
+	optional int32 coins_end_rate = 10; //赵文:终结铜钱比例,万分比 
+	optional int32 rank_max_lv = 3; // 
+	optional int32 coins_win_rate = 8; //赵文:连胜铜钱比例,万分比 
+	optional int32 coins_win_rate_limit = 9; //赵文:连胜铜钱比例上限,万分比 
+	optional int32 points_win_add = 6; //赵文:连胜增长积分 
+	optional int32 search_max_count = 4; //赵文:初始搜索次数 
+	optional int32 points_end_add = 7; //赵文:终结增加积分 
+	optional int32 ranking = 11; //赵文:上届名次显示个数 
+}

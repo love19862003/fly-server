@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message NewcardConfig {
+	optional int32 id = 1; // 
+	optional string path = 3; // 
+	optional int32 pos = 4; // 
+}

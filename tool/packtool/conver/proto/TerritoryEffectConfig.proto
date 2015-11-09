@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message TerritoryEffectConfig {
+	optional int32 id = 1; // 
+	repeated ConfigTypeGroup prop = 4; // 
+	optional int32 territory = 2; // 
+	optional int32 unit_type = 3; // 
+}

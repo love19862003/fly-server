@@ -1,0 +1,23 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ActivityConfig {
+	repeated int32 activity_show = 11; //作者:前面数字代表列表排序后面ID为资源ID 
+	optional int32 act_type = 4; // 
+	optional int32 open_date = 6; // 
+	optional int32 hot_type = 18; //作者:1、新开启2、进行中3、火爆进行中 
+	optional string rule = 17; // 
+	repeated int32 week_date = 8; // 
+	optional int32 close_date = 7; // 
+	optional int32 showornot = 12; //作者:1、显示在新公共中0、不显示 
+	optional int32 id = 1; // 
+	optional int32 title_res = 15; // 
+	optional int32 activity_id = 2; //作者:运营活动都以3为开头 
+	repeated int32 activity_drop = 10; // 
+	optional string desc = 16; // 
+	optional int32 show_type = 14; //作者:1、文本2、领取3、购买 
+	optional int32 showrule = 13; //作者:1、显示在新公共中0、不显示 
+	optional int32 act_same_index = 9; // 
+	optional int32 date_type = 5; //作者:1、正常 年月日（需要多加一天）2、开服 0天~4天（需要加一天）3、创建角色 0天~4天（需要加一天） 
+	optional string activity_name = 3; //作者:最多7个字 
+}

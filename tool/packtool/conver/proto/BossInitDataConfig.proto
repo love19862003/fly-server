@@ -1,0 +1,23 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message BossInitDataConfig {
+	optional int32 skill = 4; //BOSS施放的主动技能 
+	optional int32 open_date = 13; //开启的年月日 
+	optional int32 close_time = 17; //关闭时间 
+	optional int32 max_player = 7; //作者:单个BOSS最大玩家数-1 无限制 
+	optional int32 common_skill = 3; // 
+	repeated int32 week_date = 15; //0：周日1：周一2：周二3：周三4：周四5：周五6：周六-1：无限制 
+	optional int32 revive_time = 5; //BOSS死亡后复活时间：分钟 
+	optional int32 open_time = 16; //开启时间段：时间*60=开启时间段 
+	optional int32 id = 1; // 
+	optional int32 level = 18; //进入等级限制 
+	optional int32 boss_name = 12; // 
+	optional int32 close_date = 14; //关闭的年月日 
+	optional int32 head_pic = 10; //BOSSx小头像资源 
+	optional string event_name = 9; //关卡名称 
+	optional int32 atk_time = 6; //作者:被击杀次数总击杀次数 = 当前参展玩家数*被击杀次数 
+	optional int32 unit_pic = 11; //BOSS半身像 
+	optional int32 stage = 2; //关联到Stage中的副本ID，以及地形组和怪物组的相关数据。 
+	optional int32 min_player = 8; //作者:取本值与当前参战玩家数中较小值与攻击次数相乘 
+}

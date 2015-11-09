@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message rank_matchConfig {
+	optional int32 fight_cd = 3; //陆阳:挑战冷却时间 
+	optional int32 buy_count_cost = 5; //陆阳:次数购买价格 
+	optional int32 clear_cd_cost = 6; //陆阳:重置CD价格元宝 
+	optional int32 id = 1; // 
+	optional int32 calculate_time = 4; //陆阳:定时奖励发放时间。小时 
+	optional int32 vip_daily_count = 2; //陆阳:挑战次数 
+}

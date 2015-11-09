@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PropConfig {
+	optional int32 min = 3; // 
+	optional int32 type = 2; // 
+	optional int32 id = 1; //作者:首位1- 武器2- 防具3- 饰品二位:0-基本属性1-随机属性3~4位:类型5~7位: 流水号 
+	optional int32 max = 4; // 
+	optional int32 step_value = 5; // 
+	optional string desc = 6; // 
+}

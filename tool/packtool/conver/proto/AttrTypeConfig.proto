@@ -1,0 +1,13 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message AttrTypeConfig {
+	optional int32 atk_fix = 7; // 
+	optional int32 type = 2; //作者:首位: 星级2位: 倾向     1- 武力     2- 平衡     3- 智力3~4位: 兵种 
+	optional int32 str_fix = 4; // 
+	optional int32 hp_fix = 8; // 
+	optional int32 id = 1; // 
+	optional int32 level = 3; // 
+	optional int32 dom_fix = 6; // 
+	optional int32 int_fix = 5; // 
+}

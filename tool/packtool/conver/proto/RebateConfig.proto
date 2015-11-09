@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message RebateConfig {
+	optional string name = 2; // 
+	optional int32 icon_pic = 4; // 
+	optional int32 id = 1; // 
+	optional int32 gain_gold = 6; //作者:奖励元宝 
+	optional int32 active_level = 5; // 
+	optional string desciption = 3; // 
+}

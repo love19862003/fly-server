@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Talent_initial_idConfig {
+	optional int32 id = 1; // 
+	optional int32 start_id = 2; // 
+}

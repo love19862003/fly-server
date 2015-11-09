@@ -1,0 +1,32 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message DropConfig {
+	enum DROP_TYPE{
+	 CARDDROPTYPE = 8; // 
+	 VITALITYDROPTYPE = 11; // 
+	 VIPDROPTYPE = 13; // 
+	 TALENTCDTIMEDROPTYPE = 22; // 
+	 JIANGHUNDROPTYPE = 20; // 
+	 ACHIEVEMENTPOINTDROPTYPE = 10; // 
+	 ITEMDROPTYPE = 6; // 
+	 COINDROPTYPE = 4; // 
+	 LOYALTYDROPTYPE = 9; // 
+	 VIPEXPDROPTYPE = 24; // 
+	 CARDEXPDROPTYPE = 2; //吴凡:卡牌经验 
+	 PLAYEREXPDROPTYPE = 1; //吴凡:玩家经验 
+	 TALENTPOINTDROPTYPE = 21; // 
+	 PVPPROTECTTIMEDROPTYPE = 18; // 
+	 SKILLDROPTYPE = 3; // 
+	 MONEYDROPTYPE = 5; // 
+	 DRAGONCOMMANDDROPTYPE = 12; // 
+	 EQUIPMENTDROPTYPE = 7; // 
+	};
+	optional int32 max_level = 4; // 
+	repeated ConfigTypeGroup drop_data = 7; // 
+	optional int32 drop_count = 6; // 
+	optional int32 id = 1; //作者:1~99999通用掉落首位1- 关卡卡牌掉落2- 关卡装备掉落3- 道具掉落 4- 卡牌熔铸5- 转盘掉落6- PVP掉落7- 宝箱掉落（奖励类型2）8- 活动副本掉落9- 摇钱树2~3位等级/类4~6位序列 
+	optional int32 min_level = 3; // 
+	optional int32 rate = 5; //作者:掉率 
+	optional int32 drop_type = 2; //作者:1 整组奖励中随机1个2 整组奖励 
+}

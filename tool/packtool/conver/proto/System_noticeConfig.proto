@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message System_noticeConfig {
+	optional int32 id = 1; // 
+	optional int32 res = 2; // 
+	optional int32 title_res = 3; // 
+}

@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message MineInitDataConfig {
+	optional int32 id = 1; // 
+	optional int32 coin_rate = 3; //作者:万分比 
+	optional int32 time = 2; //作者:单位: 秒 
+	optional int32 loyalty_rate = 4; // 
+}

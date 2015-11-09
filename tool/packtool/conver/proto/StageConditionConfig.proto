@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message StageConditionConfig {
+	optional int32 type = 2; //事件类型 
+	optional int32 id = 1; //事件ID首位：事件类型ID2~末尾：事件ID 
+	optional int32 mission_para = 3; //事件条件 
+	optional int32 condition_para = 4; //事件条件参数 
+	optional string desc = 5; //事件说明 
+}

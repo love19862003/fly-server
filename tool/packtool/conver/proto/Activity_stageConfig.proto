@@ -1,0 +1,18 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Activity_stageConfig {
+	optional int32 stage_id_hard = 4; // 
+	optional int32 close_date = 8; //关闭的年月日 
+	optional int32 stage_id_eary = 2; //对应副本ID 
+	optional int32 open_time = 11; //开启时间段：时间*60=开启时间段 
+	optional int32 id = 1; //书签序号 
+	optional int32 open_date = 7; //开启的年月日 
+	optional int32 resource_id = 5; // 
+	optional int32 close_time = 12; //关闭时间 
+	repeated int32 week_date = 9; //0：周日1：周一2：周二3：周三4：周四5：周五6：周六-1：无限制 
+	optional int32 stage_type = 10; //0:无限制1:魏国2：蜀国3：吴国4：群雄 
+	optional int32 stage_name = 6; // 
+	optional int32 stage_id_normal = 3; // 
+	optional string open_week_show = 13; //活动副本开放时间的文字描述 
+}

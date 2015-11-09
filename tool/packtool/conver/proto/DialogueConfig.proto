@@ -1,0 +1,17 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message DialogueConfig {
+	optional int32 type = 3; //作者:1：单对话2：剧情对话 
+	optional int32 side = 5; //作者:0：我方1：敌方 
+	optional int32 id = 1; // 
+	optional string desc = 9; // 
+	optional int32 portrait_pic = 11; // 
+	optional string name = 13; // 
+	optional int32 card_id = 4; // 
+	optional int32 toward = 12; //武将半身像是否翻转1：翻转0：不翻转 
+	optional int32 time = 8; //作者:播放时刻1：普通攻击前2：技能释放前3:该怪物回合开始前4：我方营寨被攻破 
+	optional int32 direction = 7; //作者:方向1：左2：右 
+	optional int32 order = 6; //作者:播放次序 
+	optional int32 stage_id = 2; // 
+}

@@ -1,0 +1,36 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CardSkillConfig {
+	optional int32 atk_distance = 24; //作者:技能攻击距离 
+	optional string skill_description = 9; // 
+	optional int32 skill_root = 5; // 
+	optional int32 skill_type = 2; //作者:1- 普通攻击2- 主动技能3- 组合技4- 天赋5- 城墙被动 
+	optional int32 skill_level = 6; // 
+	optional int32 target_count = 22; //作者:目标数量 
+	optional int32 priority_target_rule = 19; //作者:目标选取规则1- 就近2- 生命最少(比例)3- 闪电链4- 生命最少(固定值)5- 敌方(有单位时不计入城墙) 
+	optional string d2 = 16; // 
+	optional int32 combine_effect_id = 28; //作者:链接至resource表中的combine_effect中 
+	optional int32 skill_effect_id = 27; //作者:链接至resource表中的skill_effect中 
+	repeated int32 talent_info = 32; //作者:首位：0百分比1固定值2位：属性id2个必填，或者都不填 
+	optional int32 target = 20; //作者:攻击目标:1-自身2-敌方3-友方4-指定单位 
+	optional int32 card_value_rank = 7; // 
+	optional int32 next_skill = 4; // 
+	optional int32 atk_range_type = 26; //作者:攻击范围类型1 列攻击,1格 攻击者当前位置+攻击距离确定中心点2 列攻击,2格 攻击者当前位置+攻击距离确定中心点3 列攻击,3格 攻击者当前位置+攻击距离确定中心点4 行攻击,3格 攻击者当前位置+攻击距离确定中心点5 十字攻击,3*3 攻击者当前位置+攻击距离确定中心点6 范围攻击,3*3 攻击者当前位置+攻击距离确定中心点7 全图范围 8 甲字形9 前后10 策士11 前后两格12 横排(整行所有目标) 
+	optional int32 harm_type = 3; //作者:1 直接伤害 直接伤害提升2 二段技 二段伤害提升3 持续伤害 直接伤害提升4 治疗 治疗数值提升5 护盾 护盾数值提升 
+	optional string d3 = 17; // 
+	optional int32 atk_min_distance = 23; //作者:技能攻击距离 
+	optional string d1 = 15; //作者: n1 固定值伤害 n2 攻击 n3 血量 
+	optional int32 id = 1; //作者:首位 国家2位 星级3~4位 卡牌序列5~6位 技能序列 
+	repeated int32 multitarget = 21; // 
+	optional int32 skill_ratio = 31; // 
+	repeated int32 buffs = 18; // 
+	optional int32 skill_range = 30; // 
+	optional int32 n1 = 10; // 
+	optional int32 n2 = 11; // 
+	optional int32 n3 = 12; // 
+	optional int32 n5 = 14; // 
+	optional int32 n4 = 13; // 
+	optional string skill_name = 8; // 
+	optional int32 can_effect_wall = 25; //作者:能否打到墙0 不能1 能 
+}

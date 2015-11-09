@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message XilianConfig {
+	optional int32 equip_rank = 2; // 
+	optional int32 id = 1; // 
+	repeated ConfigTypeGroup consume = 5; // 
+	optional int32 lock_count = 4; // 
+	optional int32 quality = 3; //作者:0~3: 装备+0~+3 
+}

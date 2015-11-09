@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{05CD2A3A-0BB8-4A0D-869B-330E95A90674}</ProjectGuid>
+    <RootNamespace>compress</RootNamespace>
+    <ProjectName>luatinker</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v120</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\..\tmp\$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../;../net/libuv/include;../net/;../third/include/;../luatinker/;../luatinker/lua-5.3.1/src/</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>LUA_COMPAT_APIINTCASTS</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lapi.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lauxlib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lbaselib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lbitlib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lcode.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lcorolib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lctype.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ldblib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ldebug.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ldo.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ldump.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lfunc.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lgc.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\linit.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\liolib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\llex.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lmathlib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lmem.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\loadlib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lobject.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lopcodes.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\loslib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lparser.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lstate.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lstring.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lstrlib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ltable.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ltablib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\ltm.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lua.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\luac.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lundump.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lutf8lib.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lvm.c" />
+    <ClCompile Include="..\luatinker\lua-5.3.1\src\lzio.c" />
+    <ClCompile Include="..\luatinker\lua_tinker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lapi.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lauxlib.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lcode.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lctype.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\ldebug.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\ldo.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lfunc.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lgc.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\llex.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\llimits.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lmem.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lobject.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lopcodes.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lparser.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lprefix.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lstate.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lstring.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\ltable.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\ltm.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lua.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lua.hpp" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\luaconf.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lualib.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lundump.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lvm.h" />
+    <ClInclude Include="..\luatinker\lua-5.3.1\src\lzio.h" />
+    <ClInclude Include="..\luatinker\lua_tinker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\luatinker\lua-5.3.1\src\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message AutoBattleInitDataConfig {
+	optional int32 id = 1; // 
+	optional int32 type2_daily_time = 4; //作者:关卡类型2每日可通关次数-1为无限制 
+	optional int32 type1_daily_time = 3; //作者:关卡类型1每日可通关次数-1为无限制 
+	optional int32 per_stage_time = 2; // 
+}

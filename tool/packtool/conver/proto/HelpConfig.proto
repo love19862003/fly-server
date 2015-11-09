@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message HelpConfig {
+	optional int32 id = 1; // 
+	optional string content = 3; // 
+	optional string title = 2; // 
+	optional int32 size = 4; //作者:0:小1：大 
+}

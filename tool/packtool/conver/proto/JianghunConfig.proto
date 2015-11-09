@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message JianghunConfig {
+	optional int32 type = 2; //作者:6碎片8卡牌 
+	optional int32 currency_type = 5; // 
+	optional int32 cost = 4; //作者:炼魂花费金额 
+	optional int32 id = 1; // 
+	optional int32 currency = 6; //作者:获得将魂 
+	optional int32 cost_currency_type = 3; //作者:铜钱1元宝2 
+}

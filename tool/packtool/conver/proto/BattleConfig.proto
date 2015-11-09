@@ -1,0 +1,28 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message BattleConfig {
+	optional int32 boss_hp = 3; // 
+	optional int32 max_count = 23; //作者:以30分钟为假血量扣除 
+	optional int32 charcterlevel = 2; // 
+	optional int32 boss_str = 5; // 
+	optional int32 card_level = 16; // 
+	repeated int32 killbonus = 20; // 
+	optional int32 block = 14; //作者:格挡 
+	optional int32 tough = 13; //作者:韧性 
+	optional int32 evade = 12; //作者:闪避 
+	optional int32 basedamage = 17; // 
+	optional int32 boss_dom = 7; // 
+	optional int32 id = 1; // 
+	optional int32 damage = 22; //作者:万分比每次伤害扣除总血量的多少 
+	optional int32 boss_atk = 4; // 
+	optional int32 cri = 9; // 
+	repeated int32 bonus = 19; // 
+	optional int32 max_coin = 18; // 
+	optional int32 damage_reduce = 15; //作者:减伤 
+	optional int32 boss_int = 6; // 
+	optional int32 damage_increase = 11; // 
+	optional int32 precision = 10; // 
+	optional int32 delay = 21; //作者:X秒扣一次伤害 
+	optional int32 hit = 8; // 
+}

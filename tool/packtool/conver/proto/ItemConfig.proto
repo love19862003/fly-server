@@ -1,0 +1,33 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ItemConfig {
+	optional int32 item_seqence = 3; // 
+	optional int32 cost = 15; // 
+	optional int32 upgrade_exp = 25; //作者:玄铁的经验 
+	optional int32 skill_cost = 24; // 
+	optional string item_desc = 9; // 
+	optional int32 require_bag_slot = 16; // 
+	optional string tips_desc = 11; // 
+	optional int32 currency_type = 22; // 
+	optional int32 item_type = 2; // 
+	optional int32 item_use = 14; // 
+	optional int32 upgrade_currency_type = 26; //作者:装备重铸货币类型 
+	optional int32 quality = 5; //作者:1、通品2、上品3、精品4、绝品5、圣品 
+	optional int32 require_card_slot = 17; // 
+	repeated ConfigTypeGroup card_drop = 29; //作者:格式0;0;0;0;01；副本；点将；章节；武斗大会；将魂商店；征战 
+	optional int32 item_resource = 8; // 
+	optional int32 upgrade_cost = 27; //作者:装备重铸货币消耗 
+	optional int32 id = 1; //作者:首位: 2-道具2~3位: 道具类型4~5位: 该道具描述6~8位: 道具序列 
+	optional int32 sell_price = 23; // 
+	optional int32 notice_type = 4; //作者:0-无公告1-2-卡牌3-装备 
+	optional int32 rare = 13; //作者:1-白2-绿3-蓝4-紫5-金 
+	repeated int32 bonus = 20; // 
+	repeated int32 drop_data = 19; // 
+	optional int32 require_equip_slot = 18; // 
+	optional int32 required_level = 28; // 
+	optional string item_name = 6; // 
+	optional int32 stack = 21; // 
+	optional int32 sell_state = 7; //作者:判断是否可以卖出0不可卖1可卖 
+	optional int32 item_unit_id = 10; // 
+}

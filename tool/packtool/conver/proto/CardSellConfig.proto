@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CardSellConfig {
+	optional int32 currency_type = 5; // 
+	optional int32 price = 6; // 
+	optional int32 id = 1; // 
+	optional int32 level = 4; // 
+	optional int32 card_max_rank = 3; // 
+	optional int32 rank = 2; // 
+}

@@ -1,0 +1,20 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message RankConfig {
+	optional int32 sub_rank = 6; // 
+	optional int32 rank_pic = 4; // 
+	repeated int32 drop_show = 14; // 
+	optional int32 id = 1; // 
+	repeated int32 drop = 13; // 
+	optional string rank_name = 3; // 
+	optional int32 min_point = 8; // 
+	optional int32 max_point = 9; // 
+	repeated ConfigTypeGroup first_get_bonus = 10; // 
+	optional int32 rob_coin_rate = 11; // 
+	optional string rob_desc = 12; // 
+	optional int32 rank_number = 5; // 
+	optional string sub_rank_name = 7; // 
+	optional int32 max_rob_coin = 15; // 
+	optional int32 rank = 2; // 
+}

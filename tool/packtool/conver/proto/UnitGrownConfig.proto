@@ -1,0 +1,22 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message UnitGrownConfig {
+	optional int32 str_grown = 2; // 
+	optional int32 int_grown = 3; // 
+	optional int32 dom_grown = 4; // 
+	optional int32 toughness = 8; // 
+	optional int32 evade = 5; // 
+	optional int32 heal_percent = 15; // 
+	optional int32 id = 1; // 
+	optional int32 damage_reduce = 11; // 
+	repeated int32 recommend_attribute = 16; // 
+	optional int32 hp_steal_fix = 14; // 
+	optional int32 reflect_fix = 13; // 
+	optional int32 damage_increase = 12; // 
+	optional int32 hit = 6; // 
+	optional int32 location = 17; //作者:1、肉盾2、输出3、辅助 
+	optional int32 precision = 10; // 
+	optional int32 block = 9; // 
+	optional int32 cri = 7; // 
+}

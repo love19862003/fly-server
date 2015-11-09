@@ -1,0 +1,13 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PayChannelConfig {
+	optional string erpid = 8; // 
+	optional string service = 7; // 
+	optional string cuid = 6; // 
+	optional string channel = 2; // 
+	optional int32 id = 1; // 
+	optional string array = 5; // 
+	optional string channel_name = 4; // 
+	optional string area = 3; // 
+}

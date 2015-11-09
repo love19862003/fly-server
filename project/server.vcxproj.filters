@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{5d39f8a3-a0d6-4dc7-ae48-50cd9d3b6356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{7533f7c8-6b97-489a-a872-abc6c7370669}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\server\TypeDefine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server\TemplateServer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server\NetTypeDefine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server\ServerBase.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server\FannyServer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\server\Version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\server\TypeDefine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server\FannyServer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server\ServerBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

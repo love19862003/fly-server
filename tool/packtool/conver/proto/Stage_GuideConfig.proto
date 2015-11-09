@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Stage_GuideConfig {
+	optional int32 open_task = 5; // 
+	optional int32 type = 3; //作者:0代表等级开启1代表任务开启2代表关卡通关3代表进入关卡 
+	optional int32 close = 6; //作者:0：全部完成结束1：第一步出现后立即结束 
+	optional int32 id = 1; //作者:首位12-3位：模块4-5位：步骤 
+	repeated int32 stepid = 2; // 
+	optional int32 type_value = 4; // 
+}

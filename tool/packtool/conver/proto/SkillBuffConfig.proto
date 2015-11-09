@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SkillBuffConfig {
+	repeated int32 para = 4; // 
+	optional int32 id = 1; // 
+	optional int32 target = 3; //作者:1-自身2-与技能目标相同 
+	repeated int32 para2 = 5; // 
+	optional int32 buff_type = 2; // 
+}

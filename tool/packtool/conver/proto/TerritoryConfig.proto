@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message TerritoryConfig {
+	optional int32 id = 1; // 
+	repeated ConfigTypeGroup territory = 2; // 
+}

@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CombineSkillEffectConfig {
+	optional int32 id = 1; //作者:首位 国家2位 星级3~4位 卡牌序列5~6位 技能序列 
+	optional int32 img = 2; //组合技显示的图像 
+	optional int32 words = 3; //组合技显示的文字图片 
+}

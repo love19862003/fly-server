@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PositionConfig {
+	optional int32 id = 1; // 
+	optional int32 achievement_point = 2; // 
+	optional string position_name = 3; // 
+	repeated ConfigTypeGroup bonus = 4; // 
+}

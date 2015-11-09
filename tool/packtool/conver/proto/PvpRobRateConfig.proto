@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PvpRobRateConfig {
+	optional int32 id = 1; // 
+	optional int32 rate = 2; // 
+}

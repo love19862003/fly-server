@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Arena_BuffConfig {
+	optional int32 id = 1; //赵文:连胜差 
+	optional int32 skill = 2; // 
+}

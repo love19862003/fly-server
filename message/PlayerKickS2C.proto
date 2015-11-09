@@ -1,0 +1,5 @@
+package Pro;
+message PlayerKickS2C{
+  enum Reason{_KICK = 1;}
+  optional Reason reason = 1;
+}

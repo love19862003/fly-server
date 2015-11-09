@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="http">
+      <UniqueIdentifier>{48b38b6d-6b0c-40b3-9a24-bf573ceda47c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http2">
+      <UniqueIdentifier>{7d809a6c-4738-4f45-bad0-27adea365579}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\http\CMakeLists.txt">
+      <Filter>http</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\http\ConnectionPool.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\HttpConnection.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\HttpReply.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\HttpServer.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\RequestHandler.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\RequestParser.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\moo-http\mongoose.c">
+      <Filter>http2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\http\moo-http\Http2.cpp">
+      <Filter>http2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\http\ConnectionPool.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\HttpConnection.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\HttpHeader.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\HttpReply.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\HttpRequest.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\HttpServer.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\RequestHandler.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\RequestParser.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\moo-http\mongoose.h">
+      <Filter>http2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\http.hpp">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\http\moo-http\Http2.h">
+      <Filter>http2</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

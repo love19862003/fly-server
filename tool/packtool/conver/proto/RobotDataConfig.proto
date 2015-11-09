@@ -1,0 +1,16 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message RobotDataConfig {
+	optional int32 coin = 9; // 
+	optional int32 id = 1; // 
+	repeated int32 card2 = 4; // 
+	optional int32 drop = 11; // 
+	repeated int32 card4 = 6; // 
+	optional int32 mine_coin = 10; // 
+	optional int32 rank_point = 8; // 
+	repeated int32 card5 = 7; // 
+	optional int32 card_count = 2; // 
+	repeated int32 card1 = 3; //作者:卡牌星级(max_rank),卡牌转生次数(rank),卡牌等级(Level),技能等级(skill_level),equip_set 
+	repeated int32 card3 = 5; // 
+}

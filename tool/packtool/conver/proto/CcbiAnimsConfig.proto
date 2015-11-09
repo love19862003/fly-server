@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CcbiAnimsConfig {
+	optional string folder = 5; // 
+	optional int32 offsety = 3; // 
+	optional int32 id = 1; // 
+	optional int32 offsetx = 2; // 
+	optional string ccbi_name = 6; // 
+	optional int32 is_flip_y = 4; // 
+}

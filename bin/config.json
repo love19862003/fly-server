@@ -1,0 +1,9 @@
+{
+	"thread": 4,                  //网络开启的工作线程数
+	"log": "../log.properties",   //log的配置文件
+	"lua": "../lua/main.lua",     //lua主函数
+	"zone": "MST+08",             //时区设置
+	"tick": 4000,                 //关服倒计时
+	"enbaleCache": true,          //是否启用cahce
+  "cacheName":"cache"           //如果启用cache cache的名字
+}

@@ -1,0 +1,34 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message StageConfig {
+	optional int32 difficulty_type = 11; //关卡难度等级：123 
+	optional int32 cost = 24; //体力消耗仅在通关成功后扣除 
+	optional string stage_desc = 9; //关卡描述 
+	repeated int32 first_drop = 21; //作者:首次通关掉落 
+	optional int32 condition = 25; //获得星级评价的条件ID 
+	optional int32 monster_group = 16; //怪物组ID 
+	optional int32 required_char_level = 7; //最低进入等级 
+	optional int32 close_time = 6; //作者:一天中的第几分钟由AM 0:00开始 
+	optional string chapter_name = 13; // 
+	optional int32 stage_type = 10; //1- 简单关卡2- 副本关卡3- 首领战4- 普通隐藏关5- 副本隐藏关 
+	optional int32 background = 18; //1,田野2,城市3，沙漠4，冰川5，森林6,幽灵城镇 
+	optional int32 vip_buy_count = 30; //VIP玩家能够每天能够购买的副本数量，ID对应VIP表内Vip_privilege中的ID 
+	optional int32 card_exp = 29; //玩家携带卡牌通关后卡牌能够获得的经验 
+	optional int32 pre_stage = 2; // 
+	optional int32 enter_cd = 28; //副本冷却CD单位：秒 
+	optional int32 stage_char_exp = 19; //通关奖励的经验值 
+	optional int32 open_time = 5; //作者:一天中的第几分钟由AM 0:00开始 
+	optional int32 id = 1; //首位: 12~3位: 章节序号4位：关卡类型 5~6位数：关卡序号7位：关卡难度（1，2，3） 
+	optional int32 permit_buy = 27; //该关卡是否允许购买0：不允许1：允许 
+	optional int32 next_stage = 3; // 
+	optional int32 unit_head_pic = 26; //武将头像资源 
+	repeated int32 drop_show = 23; //在关卡面板中显示的奖励物品信息，对应ITEM表内的ID 
+	repeated int32 drop = 22; //通关奖励的掉落包，对应drop表内的ID 
+	optional int32 day_enter_limit = 4; //每天进入的次数 
+	optional int32 gate_hp = 14; //敌方城门血量 
+	optional int32 stage_coin = 20; //通关奖励的货币数量 
+	optional string stage_name = 8; //关卡名称 
+	optional int32 territory = 17; //场景内的地形组ID 
+	optional int32 chapter_id = 12; //章节ID  
+}

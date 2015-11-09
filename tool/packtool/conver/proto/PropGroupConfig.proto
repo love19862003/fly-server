@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PropGroupConfig {
+	optional int32 id = 1; //作者:首位:1-武器2-防具3-饰品二位:0-基本属性 1-附加属性3位:星级4位:品质5~6位: 流水号 
+	repeated ConfigTypeGroup prop_id = 4; // 
+	optional int32 count = 3; //作者:随机次数每随机一次可产生1条属性 
+	optional int32 select_type = 2; // 
+}

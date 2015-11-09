@@ -1,0 +1,14 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SkeletonAnimsConfig {
+	optional string animate = 5; // 
+	optional int32 id = 1; // 
+	optional int32 duration = 8; // 
+	optional string folder = 2; // 
+	optional string name = 3; //作者:scr 发起者dst 受击者 
+	optional string armature = 4; // 
+	optional int32 offsetx = 6; // 
+	optional int32 offsety = 7; // 
+	optional int32 size = 9; // 
+}

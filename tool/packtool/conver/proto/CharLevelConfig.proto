@@ -1,0 +1,14 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CharLevelConfig {
+	optional int32 totalexp = 4; // 
+	optional int32 exp = 3; // 
+	optional int32 id = 1; // 
+	optional int32 vitality_get = 9; // 
+	optional int32 gate_hp = 6; // 
+	optional int32 unit_slot_unlock = 8; // 
+	optional int32 level = 2; // 
+	optional int32 gate2_hp = 7; // 
+	optional int32 leadship = 5; // 
+}

@@ -1,0 +1,24 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message VipInitDataConfig {
+	optional int32 vip_exp = 3; // 
+	repeated ConfigTypeGroup title_picture_id = 5; //对应VIP玩家在好友列表以及主界面上的VIP称号图第一位：VIP角标图片ID第二位：VIP图标图素ID缺损填写：-1 
+	optional int32 vip_gift_original = 11; //VIP礼包的原价，客户端显示使用 
+	optional int32 vip_gift_price = 12; //VIP礼包的购买价格，该礼包只能使用元宝进行购买此处填写的值为单个礼包购买的元宝价格 
+	optional int32 vip_level = 2; // 
+	optional int32 pve_skip_free = 15; //pvp每日拥有免费的跳过次数 
+	optional int32 vip_max_energy = 13; //VIP体力上限 
+	optional int32 arena_activity_count_charge = 18; //VIP玩家每日额外免费增加武斗大会次数 
+	optional int32 daily_refresh = 4; //集市每日刷新次数 
+	optional int32 quick_stage = 8; //每日免费扫荡次数 
+	optional int32 id = 1; // 
+	optional string directions = 19; // 
+	optional int32 pve_activity_skip_free = 17; //作者:活动副本跳过 
+	optional int32 pvp_skip_free = 16; //pvp每日拥有免费的跳过次数 
+	optional int32 moneytree = 7; //摇钱树次数 
+	optional int32 friend_add_count = 6; //作者:好友上限 
+	optional int32 vip_gift = 10; //可购买的VIP礼包ID 对应item id 
+	optional int32 vip_cultivate = 9; //是否可购买VIP养成计划0：不能购买1：可以购买 
+	optional int32 boss_skip_free = 14; //每日Boss战免费跳过次数0：不能跳过1：可以跳过 
+}

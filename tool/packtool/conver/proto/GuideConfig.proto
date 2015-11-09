@@ -1,0 +1,10 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message GuideConfig {
+	optional int32 condition_type = 2; //作者:0、等级1、任务2、关卡 
+	optional int32 close = 5; //作者:0：全部完成结束1：第一步出现后立即结束 
+	optional int32 id = 1; //作者:首位12-3位：模块4-5位：步骤 
+	repeated int32 stepid = 4; // 
+	optional int32 value = 3; // 
+}

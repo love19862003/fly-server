@@ -1,0 +1,19 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message storeConfig {
+	optional int32 refresh_type = 14; //作者:商店的刷新类型。0代表每天0点刷新。1代表及时刷新。启用refresh_time作倒计时用 
+	optional int32 show_count = 12; //作者:商店商品中用于展示的数量。如果是0 则没有。这个只有在drop_count是随机抽取的时候在会启用 
+	repeated int32 open_time = 4; //商店的开启时间段0：代表永久开启若开启时间段为多个请已 
+	optional int32 id = 1; // 
+	optional int32 keep_time = 5; //商店开启后的持续时间若永久开启请填写24，若有实际开启时限则填写实际值注：填写的值不能和开启时间段之间的间隔有冲突，不能填写0 
+	optional int32 enable_vip = 13; //作者:这个类型的商店是不是和VIP的等级挂钩。特惠 集市 典藏 还有将魂目前不挂钩。 
+	optional int32 drop_count = 11; //1.到商店刷新时间时规定商店内会有多少个道具进行刷新（针对单个商店进行刷新）2.若该商店内的道具不需要刷新时则填写：-13.刷新道具的数量需要 <= 该商店内实际成列商品的数量。 
+	optional int32 momey_refresh_cost = 9; //刷新商城使用的货币类型消耗，对应cost_type 
+	optional int32 refresh_time = 10; //商城内的所有道具刷新时间间隔单位（秒） 
+	optional int32 vip_daily_limit = 7; //每日商店免费刷新次数对应VIP表中Vip_privilege标签内的ID 
+	optional int32 money_refresh_count = 8; //商城每日可以使用元宝刷新的次数基础值-1代表商店花钱可以无限刷，前提是daily_free_count必须不小于0 
+	optional int32 allow_refresh = 6; //小于等于0 代表不能刷新。 大于0代表可以刷新 
+	optional int32 store_type = 3; //商店类型1：集市2：特惠3：典藏4：VIP特权商店（云游商人） 
+	optional int32 vip_lv = 2; //对应玩家的VIP现有等级 
+}

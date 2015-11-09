@@ -1,0 +1,13 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Activity_RebateConfig {
+	optional int32 rebate_once_time = 3; //陆阳:单次返利时间 
+	optional int32 end_time = 6; //陆阳:活动结束时间 
+	optional int32 rebate_once_count = 7; //陆阳:类型 
+	repeated ConfigTypeGroup rebate_money = 8; //陆阳:返利元宝 
+	optional int32 id = 1; // 
+	optional int32 rebate_end_time = 4; //陆阳:返利结束总时间 
+	optional int32 start_time = 5; //陆阳:活动开启时间 
+	optional int32 rebate_count = 2; //陆阳:返利次数 
+}

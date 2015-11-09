@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CostConfig {
+	optional int32 type = 2; // 
+	optional int32 currency_type = 5; // 
+	optional int32 cost = 6; // 
+	optional int32 id = 1; // 
+	optional int32 min_count = 3; //作者:当前已购买次数+1 
+	optional int32 max_count = 4; // 
+}

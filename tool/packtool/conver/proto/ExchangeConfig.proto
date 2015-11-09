@@ -1,0 +1,13 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ExchangeConfig {
+	repeated ConfigTypeGroup exchange_item = 4; //作者:item_id,count;item_id,count 
+	repeated ConfigTypeGroup bonus = 5; // 
+	optional int32 close_time = 7; //作者:yyyymmdd 
+	optional int32 open_time = 6; //作者:yyyymmdd 
+	optional int32 id = 1; // 
+	optional int32 daily_exchange = 8; // 
+	optional string exchange_name = 3; //作者:item_id,count;item_id,count 
+	optional int32 activity_id = 2; //作者:关联activity 
+}

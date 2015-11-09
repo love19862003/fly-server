@@ -1,0 +1,19 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message BattleThemeConfig {
+	optional int32 empty = 13; // 
+	optional int32 effect = 14; // 
+	optional int32 id = 1; // 
+	repeated int32 guard_towner = 12; //作者:Guard Towner 
+	repeated int32 wall = 11; // 
+	optional int32 forest = 5; // 
+	optional int32 barracks = 10; // 
+	optional int32 flag = 9; // 
+	optional string name = 2; // 
+	optional int32 bue_tent = 7; //作者:下 
+	optional int32 green_tent = 8; //作者:上 
+	optional int32 hill = 4; // 
+	optional int32 bg = 3; // 
+	optional int32 tower = 6; // 
+}

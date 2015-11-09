@@ -1,0 +1,8 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message descrptionConfig {
+	optional int32 id = 1; // 
+	optional string name = 2; // 
+	optional string cn_desc = 3; // 
+}

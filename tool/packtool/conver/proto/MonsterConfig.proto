@@ -1,0 +1,32 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message MonsterConfig {
+	optional int32 cri = 18; // 
+	optional int32 damage_increase = 20; // 
+	optional int32 skill = 7; // 
+	optional int32 unit = 3; // 
+	repeated int32 drop = 27; // 
+	optional int32 hp_steal_fix = 26; // 
+	optional int32 immune_type = 11; // 
+	optional int32 reflect_fix = 25; // 
+	optional int32 level = 5; // 
+	optional int32 tough = 22; // 
+	optional int32 evade = 21; // 
+	optional int32 damage_reduce = 24; // 
+	optional int32 block = 23; // 
+	optional int32 str_fix = 14; // 
+	optional int32 talent = 9; // 
+	optional int32 id = 1; // 
+	optional int32 commonskill = 6; // 
+	optional int32 hp_fix = 13; // 
+	optional int32 hit = 17; // 
+	optional int32 dom_fix = 16; // 
+	optional int32 config = 10; //作者:ref UnitInitData 
+	optional string monster_name = 2; // 
+	optional int32 unit_type = 4; // 
+	optional int32 int_fix = 15; // 
+	optional int32 precision = 19; // 
+	optional int32 atk_fix = 12; // 
+	optional int32 card_level = 8; // 
+}

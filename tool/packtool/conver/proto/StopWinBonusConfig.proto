@@ -1,0 +1,9 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message StopWinBonusConfig {
+	optional int32 id = 1; // 
+	optional int32 max_win = 3; // 
+	repeated ConfigTypeGroup bonus = 4; // 
+	optional int32 min_win = 2; // 
+}

@@ -1,0 +1,16 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message Mission_InfoConfig {
+	optional int32 activity_type = 2; // 
+	optional int32 membership = 11; // 
+	optional int32 id = 1; // 
+	optional string desciption = 8; // 
+	optional int32 param1 = 5; //作者:指定条件中的某一件物品 
+	optional int32 jump_value = 10; // 
+	optional int32 var = 6; //作者:目的次数 
+	optional int32 jump_type = 9; //作者:-1、元宝消费1、关卡2、无3、升级4、征战5、抽卡6、典藏7、矿场8、集市9、聚宝盆10、特惠11、主线任务12、好友13、商城充值14、上阵8列表15、日常任务16、boss17、武斗18、竞技场19、将魂商店20、军政府21、签到 
+	repeated int32 bonus = 7; // 
+	optional int32 type = 3; //作者:任务类型1 StagePass,  通关副本2 EquipStrong,  装备强化3 ItemUse,   道具使用4 DrawCardUseItemsOne,  锦囊单抽5 DrawCardUseItemsTen,  锦囊十单抽6 DrawCardUseLoyaltyOne,  民心单抽7 DrawCardUseLoyaltyTen,  民心十抽8 MoneyTreeGetCoin,  摇钱树9 EatPartyTimes,  犒赏三军次数10 PVPGetTalentPoint,  PVP获得天赋点11 PVPGetCoin,  PVP获得铜钱12 TalentSkillLvUp,  天赋技能升级13 DoneDailyTask,  日常任务完成14 CardSkillLvUp  卡牌技能升级 
+	optional int32 param = 4; //作者:指定条件中的某一件物品 
+}

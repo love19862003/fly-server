@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message UnitInitDataConfig {
+	optional int32 int_atk = 3; // 
+	optional int32 base_move = 6; // 
+	optional int32 id = 1; // 
+	optional int32 str_atk = 2; // 
+	optional int32 dom_hp = 4; // 
+	optional int32 energy_base = 5; // 
+}

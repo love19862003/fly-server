@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="lua5.1">
+      <UniqueIdentifier>{c966a4c9-73ba-49d1-bcba-c334d11febe7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\luaPlus\LuaAutoBlock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaCall.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaHelper_Object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaHelper_StackObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaLink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaPlus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaPlusCD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaPlusInternal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaStackObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaStackTableIterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaStateCD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaStateOutFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\LuaTableIterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lapi.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lauxlib.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lcode.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\ldebug.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\ldo.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lfunc.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lgc.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\llex.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\llimits.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lmem.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lobject.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lopcodes.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lparser.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lstate.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lstring.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\ltable.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\ltm.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lua.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\luaconf.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lualib.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lundump.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lvm.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luaPlus\src\lzio.h">
+      <Filter>lua5.1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\luaPlus\LuaCall.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\luaPlus\LuaObject.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\luaPlus\LuaStackObject.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\luaPlus\LuaStackTableIterator.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\luaPlus\LuaState.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\luaPlus\src\Makefile">
+      <Filter>lua5.1</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\luaPlus\LuaObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaPlus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaPlus_Libs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaPlusAddons.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaState_DumpObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaStateOutFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaTableIterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\lwstrlib.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\popen.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lapi.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lauxlib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lbaselib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lcode.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ldblib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ldebug.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ldo.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ldump.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lfunc.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lgc.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\linit.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\liolib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\llex.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lmathlib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lmem.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\loadlib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lobject.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lopcodes.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\loslib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lparser.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lstate.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lstring.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lstrlib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ltable.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ltablib.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\ltm.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lua.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lundump.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lvm.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\lzio.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\src\print.c">
+      <Filter>lua5.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luaPlus\LuaPlusAll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

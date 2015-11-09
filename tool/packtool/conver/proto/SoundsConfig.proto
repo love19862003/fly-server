@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SoundsConfig {
+	optional int32 id = 1; //作者:千位1=魏国，2=蜀国，3=吴国，4=群雄 
+	optional string sounds_path = 2; // 
+}

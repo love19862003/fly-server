@@ -1,0 +1,22 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CourseConfig {
+	optional int32 newsystem_jump = 18; //作者:新系统开启跳转0、直接关闭1、跳转到首页 
+	repeated int32 range_pos_offset = 9; //作者:相应区域坐标校正a） 可以为空配置，默认使用0,0b) 必须填写且只能填写两位，首位代表X，末尾代表Yc) 当range_Type为3时，必须填写两个参数，填写内容为战斗内卡牌位置起始和目标坐标（4 ~ 15），两个参数不能相等 
+	optional int32 is_weak = 3; //作者:1、点击后则清除引导层0、默认不清除（或不填） 
+	optional int32 skip_ui_id = 4; //作者:跳过小步时所在的UI 
+	optional string newsystem_title = 16; //作者:新系统开启title 
+	optional string newsystem_text = 17; //作者:新系统开启文本 
+	optional int32 global_range_id = 10; //作者:配置id1、定位首页按钮2、定位战役按钮3、定位征战按钮4、定位活动按钮 
+	optional int32 newsystem_icon = 15; //作者:frame_type为1时，填写新系统开启iconframe_type为2时，填写图片id 
+	repeated int32 touch_size = 8; //作者:控件响应大小说明：a） 可以为空配置，使用默认控件大小b) 如果填写参数，必须填写且只能填写两位，首位代表X，末尾代表Y 
+	optional int32 effect = 5; //作者:0：无1：圆圈2：方块 
+	optional int32 id = 1; // 
+	optional int32 range_type = 6; //作者:定位类型：0 控件定位1 配置定位2 全屏（点击屏幕继续）3 战斗内布阵4 加载图片 
+	repeated int32 ui_id = 2; //作者:触发引导界面 
+	optional int32 frame_type = 14; //作者:0、引导框1、新系统开启框2、加载图片-1、无 
+	optional string desciption2 = 12; //作者:详细说明，字体用特定颜色标注 
+	optional string desciption = 11; // 
+	optional int32 component_id = 7; //作者:手指指向控件id 
+}

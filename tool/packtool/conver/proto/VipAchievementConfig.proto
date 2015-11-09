@@ -1,0 +1,18 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message VipAchievementConfig {
+	optional int32 open_task = 9; // 
+	optional int32 isopen = 12; // 
+	optional int32 id = 1; // 
+	optional int32 condition = 6; // 
+	optional string desc = 5; // 
+	optional int32 jump_value = 14; // 
+	optional int32 jump_type = 13; //作者:-1、元宝消费1、关卡2、无3、升级4、征战5、抽卡6、典藏7、矿场8、集市9、聚宝盆10、特惠11、主线任务12、好友13、商城充值 
+	optional string name = 4; // 
+	optional int32 condition_para = 7; // 
+	optional int32 achievement_point = 8; // 
+	optional int32 sheet_type = 3; // 
+	optional int32 active_level = 11; // 
+	optional int32 bonus = 10; // 
+}

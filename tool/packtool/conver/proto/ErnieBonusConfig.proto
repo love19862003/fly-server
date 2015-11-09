@@ -1,0 +1,16 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message ErnieBonusConfig {
+	repeated int32 first_add_drop = 4; // 
+	optional int32 cost = 7; // 
+	optional int32 id = 1; // 
+	repeated int32 puzzle_drop = 6; // 
+	optional string desc = 9; // 
+	optional int32 replace_count = 10; // 
+	repeated int32 drop_data = 3; // 
+	repeated int32 add_drop = 5; // 
+	optional int32 replace_drop = 11; // 
+	repeated int32 first_drop_data = 2; //作者:首次使用本功能时的掉落 
+	repeated int32 ernie_display = 8; // 
+}

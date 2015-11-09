@@ -1,0 +1,15 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message LivenessConfig {
+	optional int32 pre_liveness = 5; // 
+	optional int32 type = 2; // 
+	optional int32 id = 1; // 
+	optional int32 system_open_value = 10; // 
+	optional string desciption = 4; // 
+	optional int32 is_open = 3; //作者:1、第一条0、非第一条 
+	optional int32 count = 8; // 
+	optional int32 next_liveness = 6; // 
+	optional int32 system_open_type = 9; // 
+	optional int32 value = 7; // 
+}

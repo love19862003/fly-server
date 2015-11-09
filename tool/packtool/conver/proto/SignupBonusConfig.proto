@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message SignupBonusConfig {
+	optional int32 type = 2; // 
+	optional int32 month = 4; // 
+	optional int32 id = 1; // 
+	optional int32 effect = 6; // 
+	optional int32 condition = 3; // 
+	repeated ConfigTypeGroup bonus = 5; // 
+}

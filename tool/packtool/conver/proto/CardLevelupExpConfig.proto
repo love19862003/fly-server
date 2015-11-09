@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CardLevelupExpConfig {
+	optional int32 total_exp = 5; // 
+	optional int32 exp = 4; // 
+	optional int32 id = 1; // 
+	optional int32 level = 2; // 
+	optional int32 card_max_rank = 3; // 
+	repeated int32 drop = 6; // 
+}

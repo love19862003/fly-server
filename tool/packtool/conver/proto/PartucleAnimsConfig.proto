@@ -1,0 +1,12 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message PartucleAnimsConfig {
+	optional string folder = 2; // 
+	optional string name = 3; // 
+	optional int32 isloop = 7; //作者:0 不循环1 循环 
+	optional int32 id = 1; // 
+	optional int32 offsetx = 4; // 
+	optional int32 duration = 6; //作者:时间 
+	optional int32 offsety = 5; // 
+}

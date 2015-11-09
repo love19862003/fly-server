@@ -1,0 +1,7 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message InitialAchievementConfig {
+	optional int32 id = 1; //作者:1、普通成就2、VIP成就 
+	repeated int32 initial_achievement = 2; // 
+}

@@ -1,0 +1,19 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message GuideBonusConfig {
+	repeated int32 first_add_drop = 4; //作者:仅使用于十连抽首次十连抽时额外掉落 
+	optional int32 cost = 8; // 
+	optional int32 id = 1; // 
+	repeated int32 puzzle_drop = 6; // 
+	optional int32 quick_money_type = 14; // 
+	optional string desc = 10; // 
+	optional int32 quick_money_cost = 13; // 
+	optional int32 replace_drop = 12; // 
+	optional int32 replace_count = 11; // 
+	repeated int32 drop_data = 3; // 
+	repeated int32 add_drop = 5; //作者:仅使用于十连抽十连抽时额外掉落 
+	repeated int32 guide_display = 9; // 
+	repeated int32 first_drop_data = 2; //作者:首次使用本功能时的掉落 
+	optional int32 item_id = 7; // 
+}

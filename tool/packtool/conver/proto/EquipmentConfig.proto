@@ -1,0 +1,35 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message EquipmentConfig {
+	optional string description = 11; // 
+	optional int32 base_prop = 19; // 
+	optional int32 total_need_exp = 29; //作者:升品质总需求经验 
+	optional int32 smelt_currency_type = 25; //作者:分解货币类型 
+	optional int32 improve_attr = 18; // 
+	optional int32 equip_root = 4; // 
+	optional int32 smelt_cost = 26; //作者:分解货币消耗 
+	optional int32 rare = 7; // 
+	optional int32 equip_rank = 8; // 
+	optional int32 upgrade_equip_id = 28; //作者:品质提升后，武器id 
+	optional string root_name = 5; // 
+	optional int32 can_smelt = 24; //作者:是否可分解 
+	optional int32 sell_price = 23; // 
+	optional int32 quality = 9; //作者:1、通品2、上品3、精品4、绝品5、圣品 
+	optional int32 base_attr_type = 16; // 
+	optional int32 currency_type = 22; // 
+	optional string card_name = 6; // 
+	optional int32 equip_pic = 14; // 
+	optional int32 id = 1; //作者:首位 3-装备2位 道具类型3~4位 道具星级5位 道具品质6~8位 道具序列 
+	optional int32 base_attr = 17; // 
+	optional int32 equip_type = 3; //作者:1-武器2-防具3-饰品 
+	optional int32 depend_prop = 21; //作者:扩展属性 
+	optional string ralate_stage = 13; // 
+	optional int32 equip_icon = 15; // 
+	optional string name = 10; // 
+	repeated int32 smelt_data = 27; //作者:分解产出 
+	optional int32 xilian_prop = 30; //作者:洗炼产出 
+	optional string relate_unit = 12; // 
+	optional int32 isbase = 2; // 
+	optional int32 random_prop = 20; // 
+}

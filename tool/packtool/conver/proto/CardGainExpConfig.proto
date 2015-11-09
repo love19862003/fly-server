@@ -1,0 +1,11 @@
+package DianShiTech.Config;
+
+import "ConfigTypeGroup.proto";
+message CardGainExpConfig {
+	optional int32 coin_cost = 6; // 
+	optional int32 currency_type = 5; // 
+	optional int32 id = 1; // 
+	optional int32 level = 2; // 
+	optional int32 gain_exp = 4; // 
+	optional int32 rank = 3; // 
+}
