@@ -150,6 +150,25 @@ public:
     }
     return true;
   }
+
+  bool get(const key_type& key, const value_type& data, size_t& rank) {
+    Node* node = getNode(key, false);
+    if(nullptr == node) { return false; }
+    Content* current = node->content;
+    rank = 1;
+    size_t index = m_ky(key, m_size);
+    for(size_t i = 0; i < index; ++i) {
+      if(nullptr != m_data[i]) { 
+        rank += m_data[i]->count;
+      }
+    }
+    while(nullptr != current) {
+      if(m_ef(current->data, data)) { rank++; return true; }
+      current = current->next;
+    }
+    return false;
+  }
+
   //更新数据
   bool move(const key_type& oldKey, const key_type& newKey, const value_type& data) {
     Node* pOld = getNode(oldKey, false);
@@ -228,6 +247,7 @@ protected:
     }
     return m_data[index];
   }
+  
 private:
   size_t m_size;        //桶列表长度
   bool m_autoFreeNode;  //为了节省内存，删除没有数据的节点
