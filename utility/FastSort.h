@@ -15,20 +15,26 @@
 *********************************************************************/
 #ifndef __FANNY_FastSort_H__
 #define __FANNY_FastSort_H__
-
 #include <assert.h>
 #include <string.h>
 #include <memory>
+
+//分段
 template<typename Key>
 struct Hash {
-  size_t operator()(const Key& key) const { return static_cast<size_t>(key); }
+  size_t operator()(const Key& key, size_t size) const { 
+    if(key >= size - 1) { return 0; }
+    return size - 1 - key; 
+  }
 };
+//排序比较
 template<typename Data>
 struct Compare {
   bool operator() (const Data& l, const Data& r) const{
     return l > r;
   }
 };
+//相等比较
 template<typename Data>
 struct Equal {
   bool operator()(const Data& l, const Data& r) const {
@@ -57,7 +63,7 @@ public:
     Content* content;
   };
 public:
-  EFastSort(size_t s) : m_size(s) {
+  EFastSort(size_t s) : m_size(s + 1) {
     m_data = (Node**)malloc(sizeof(Node*) * m_size);
     memset(m_data, 0x0, sizeof(Node*) * m_size);
     m_memory = sizeof(Node*) * m_size;
@@ -73,6 +79,7 @@ public:
         delete father;
       }
       delete node;
+      m_data[i] = nullptr;
     }
     free(m_data);
   }
@@ -83,51 +90,22 @@ public:
     p->next = nullptr;
     addContent(key, p);
   }
-
-  int rank(const key_type& key, const value_type& data) {
-    unsigned int  rank = 0;
-    for(size_t i = getKeyIndex(key) + 1; i < m_size; ++i) {
-      Node* n = getNode(i);
-      if(n) { rank += n->count; }
-    }
-    Node* node = getNode(key);
-    if(nullptr == node) { return -1; }
-    Content* current = node->content;
-    while(nullptr != current) {
-      ++rank;
-      if(m_ef(data, current->data)) { return rank; }
-      current = current->next;
-    }
-    return -1;
-  }
-
   bool getRankList(unsigned int count, std::vector<value_type>& rank) const {
-    size_t index = m_size - 1;
-    while(count > 0) {
-      const Node* pNode = getNode(index);
-      if(nullptr == pNode) { continue; }
-
-      size_t size = pNode->count;
-      if(pNode->count >= count) {
-        size = count;
-        count = 0;
-      } else {
-        count -= pNode->count;
+    for(size_t i = 0; i < m_size; ++i) {
+      Node* pNode = m_data[i];
+      if(nullptr != pNode) {
+        Content* current = pNode->content;
+        while(current &&  count > 0) {
+          rank.push_back(current->data);
+          current = current->next;
+          --count;
+        }
+        if(count <= 0) { return true; }
       }
-      Content* current = pNode->content;
-      while(current && size > 0) {
-        rank.push_back(current->data);
-        current = current->next;
-        --size;
-      }
-
-      if(index == 0 || count == 0) {
-        break;
-      }
-      --index;
     }
     return true;
   }
+  //排序
   bool move(const key_type& oldKey, const key_type& newKey, const value_type& data) {
     Node* pOld = getNode(oldKey);
     if(nullptr == pOld) { return false; }
@@ -139,10 +117,8 @@ public:
         if(nullptr != father) { father->next = current->next; }
         else { pOld->content = current->next; }
         --pOld->count;
-
-        if(nullptr == pOld->content) {
-          removeNode(oldKey);
-        }
+        current->data = data;
+        current->next = nullptr;
         addContent(newKey, current);
         return true;
       } else {
@@ -164,20 +140,23 @@ protected:
       pNode->content = p;
       return;
     }
+    //单个段位排序
     Content* current = pNode->content;
     Content* father = nullptr;
     while(nullptr != current) {
-      if (m_cf(current->data, p->data)){  //排序
+      if (m_cf(current->data, p->data)){
         if(father) { father->next = p; p->next = current; }
         else { pNode->content = p; p->next = current; }
-        break;
+        return;
       } else {
         father = current;
         current = father->next;
       }
     }
+    father->next = p;
   }
   Node* checkNode(const key_type& key) {
+    //获取桶
     size_t index = getKeyIndex(key);
     if(nullptr == m_data[index]) {
       Node* p = new Node;
@@ -188,33 +167,16 @@ protected:
     }
     return m_data[index];
   }
-  void removeNode(const key_type& key) {
-    size_t index = getKeyIndex(key);
-    if(m_data[index]) {
-      delete m_data[index];
-      m_data[index] = nullptr;
-      m_memory -= sizeof(Node);
-    }
-  }
   Node* getNode(const key_type& key) { 
     return  m_data[getKeyIndex(key)];
   }
-  const Node* getNode(const key_type& key) const {
-    return  m_data[getKeyIndex(key)];
-  }
   size_t getKeyIndex(const key_type& key) {
-    size_t index = m_ky(key);
-    assert(index < m_size);
-    return index;
-  }
-
-  size_t getKeyIndex(const key_type& key) const {
-    size_t index = m_ky(key);
+    size_t index = m_ky(key, m_size);
     assert(index < m_size);
     return index;
   }
 private:
-  size_t m_size;        //桶大小
+  size_t m_size;        //桶列表长度
   Node** m_data;        //桶列表
   size_t m_count = 0;   //数据记录
   size_t m_memory = 0;  //内存消耗
