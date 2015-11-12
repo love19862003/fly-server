@@ -40,30 +40,27 @@ struct Equal {
 };
 
 /*
-typedef   unsigned long long pid;
-struct SortData {
-  pid id;
-  unsigned int value;
-};
+typedef  unsigned long long pid;
+typedef  unsigned int sorce;
 
  struct HashSortData {
-    size_t operator()(const unsigned int& key, size_t max) const {
+    size_t operator()(const sorce& key, size_t max) const {
       if(key >= max - 1) { return 0; }
       return max - 1 - key;
     }
   };
 
 struct EqualSortData {
-  bool operator()(const SortData& l, const SortData& r) const {
-    return l.id == r.id;   // ID是唯一标示
+  bool operator()(const pid& l, const pid& r) const {
+    return l== r;   // ID是唯一标示
   }
 };
 struct CompareSortData {
-  bool operator()(const SortData& l, const SortData& r) const {
+  bool operator()(const sorce& l, const sorce& r) const {
     return l.value > r.value;   // value 是小段被排序数值
   }
 };
-EFastSort<unsigned int, SortData, HashSortData, EqualSortData, CompareSortData> test(SValueMax);
+EFastSort<sorce, SortData, HashSortData, EqualSortData, CompareSortData> test(SValueMax);
 */
 
 /*
@@ -92,6 +89,8 @@ public:
   typedef EqualFun    equal_fun;
   typedef HashFun     hash_fun;
   typedef CompareFun  compare_fun;
+
+  typedef std::pair<key_type, value_type> pair_type;
 protected:
   struct Content {
     key_type key;
@@ -135,13 +134,13 @@ public:
   }
 
   //获取排行榜
-  bool getRankList(unsigned int count, std::vector<value_type>& rank) const {
+  bool getRankList(unsigned int count, std::vector<pair_type>& rank) const {
     for(size_t i = 0; i < m_size; ++i) {
       Node* pNode = m_data[i];
       if(nullptr != pNode) {
         Content* current = pNode->content;
         while(current &&  count > 0) {
-          rank.push_back(current->data);
+          rank.push_back(std::make_pair(current->key, current->data));
           current = current->next;
           --count;
         }

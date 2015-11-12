@@ -41,10 +41,6 @@ struct TestData {
 };
 typedef   std::multimap<unsigned int, pid> pmap;
 typedef   std::map<pid, TestData> smap;
-struct SortData {
-  pid id;
-  unsigned int value;
-};
 
 int main(int argc, char* argv[]) { 
   size_t SValueMax = 100;
@@ -97,19 +93,16 @@ int main(int argc, char* argv[]) {
   };
 
   struct EqualSortData {
-    bool operator()(const SortData& l, const SortData& r) const {
-      return l.id == r.id;
+    bool operator()(const pid& l, const pid& r) const {
+      return l == r;
     }
   };
-  EFastSort<unsigned int, SortData, HashSortData, EqualSortData> test(SValueMax);
+  EFastSort<unsigned int, pid, HashSortData, EqualSortData, Compare<unsigned int>> test(SValueMax);
  
   double time2 = 0.;
   for(auto& pair : test_maps) {
     timer.restart();
-    SortData data;
-    data.id = pair.second;
-    data.value = pair.first;
-    test.add(data.value, data);
+    test.add(pair.first, pair.second);
     time2 += timer.elapsed();
   }
   std::cout << "add to test using:" << time2 << " memory:" << test.bytes() << std::endl;
@@ -129,18 +122,15 @@ int main(int argc, char* argv[]) {
   timer.restart();
   size_t index = 0;
   for(auto& pair : sort_maps) {
-    SortData data;
-    data.id = pair.second.id;
-    data.value = pair.second.nv;
-    test.move(pair.second.ov, pair.second.nv, data);
+    test.move(pair.second.ov, pair.second.nv, pair.second.id);
     ++index;
   }
   std::cout << "sort test count:" << sort_maps.size() << " using time:" << timer.elapsed() << std::endl;
-  std::vector<SortData> rank;
+  std::vector<std::pair<unsigned int, pid>> rank;
   rank.reserve(SRankShow);
   test.getRankList(SRankShow, rank);
   for (auto& data : rank){
-    std::cout << "pid:" << data.id << " source:" << data.value << std::endl;
+    std::cout << "pid:" << data.second << " source:" << data.first << std::endl;
   }
   
   return 1;
