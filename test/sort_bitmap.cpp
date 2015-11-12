@@ -101,12 +101,7 @@ int main(int argc, char* argv[]) {
       return l.id == r.id;
     }
   };
-  struct CompareSortData {
-    bool operator()(const SortData& l, const SortData& r) const {
-      return l.value > r.value;
-    }
-  };
-  EFastSort<unsigned int, SortData, HashSortData, EqualSortData, CompareSortData> test(SValueMax);
+  EFastSort<unsigned int, SortData, HashSortData, EqualSortData> test(SValueMax);
  
   double time2 = 0.;
   for(auto& pair : test_maps) {
