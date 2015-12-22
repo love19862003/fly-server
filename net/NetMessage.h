@@ -30,26 +30,26 @@ namespace ShareSpace {
       virtual ~NetBuffer();
       NetBuffer& operator = (NetBuffer&& buffer);
 
-      bool isLock() const { return m_lock; }
-      bool lock() { m_lock = true; return m_lock; }
-      bool hasWrite() const { return length() > 0; }
-      bool hasRead() const { return needReadLength() > 0; }
-      bool isFull() const { return m_writePos >= m_maxLen; }
-      bool canRead(size_t len) const { return len <= needReadLength(); }
+      inline bool isLock() const { return m_lock; }
+      inline bool lock() { m_lock = true; return m_lock; }
+      inline bool hasWrite() const { return length() > 0; }
+      inline bool hasRead() const { return needReadLength() > 0; }
+      inline bool isFull() const { return m_writePos >= m_maxLen; }
+      inline bool canRead(size_t len) const { return len <= needReadLength(); }
 
-      size_t length() const { return m_writePos; }
-      size_t maxLength() const { return m_maxLen; }
-      size_t needReadLength() const { return m_writePos - m_readPos; }
+      inline size_t length() const { return m_writePos; }
+      inline size_t maxLength() const { return m_maxLen; }
+      inline size_t needReadLength() const { return m_writePos - m_readPos; }
 
-      const char* data() const { return m_buffer; }
-      char* data() { return m_buffer; }
+      inline const char* data() const { return m_buffer; }
+      inline char* data() { return m_buffer; }
 
-      const char* writeData() const { return m_buffer + m_writePos; }
-      char* writeData() { return m_buffer + m_writePos; }
-      char* writeData(size_t len);  // set  m_writePos += len && return the write pointer before add 
+      inline const char* writeData() const { return m_buffer + m_writePos; }
+      inline char* writeData() { return m_buffer + m_writePos; }
+      inline char* writeData(size_t len);  // set  m_writePos += len && return the write pointer before add 
 
-      const char* readData() const { return m_buffer + m_readPos; }
-      char* readData() { return m_buffer + m_readPos; }
+      inline const char* readData() const { return m_buffer + m_readPos; }
+      inline char* readData() { return m_buffer + m_readPos; }
       char* readData(size_t len);   // set  m_readPos += len && return the read pointer before add 
 
       void clearReadBuffer();                             // clear read data
