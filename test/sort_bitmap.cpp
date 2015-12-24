@@ -25,6 +25,8 @@
 #include <string.h>
 #include <utility/FastSort.h>
 #include <functional>
+using namespace ShareSpace::Utility;
+
 typedef   unsigned long long pid;
 static std::random_device gdevice;
 static std::mt19937 gen(gdevice());
@@ -41,6 +43,8 @@ struct TestData {
 };
 typedef   std::multimap<unsigned int, pid> pmap;
 typedef   std::map<pid, TestData> smap;
+
+
 
 int main(int argc, char* argv[]) { 
   size_t SValueMax = 100;
