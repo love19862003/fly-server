@@ -231,7 +231,7 @@ namespace ShareSpace {
           assert(nullptr == m_data[index]->content);
           delete m_data[index];
           m_data[index] = nullptr;
-          m_memory += sizeof(Node);
+          m_memory -= sizeof(Node);
         }
       }
       Node* getNode(const key_type& key, bool create) {

@@ -42,12 +42,12 @@ namespace ShareSpace {
       }
 
       bool addData(const key_type& key, const value_type& v) {
-        iterator_type it = m_map.find(key);
-        if(it != m_map.end()) {
-          return false;
-        }
-        m_map.insert(std::pair<key_type, value_type>(key, v));
-        return true;
+//         iterator_type it = m_map.find(key);
+//         if(it != m_map.end()) {
+//           return false;
+//         }
+        return m_map.insert(std::pair<key_type, value_type>(key, v)).second;
+        //return true;
       }
       void replaceData(const key_type& key, const value_type& v) {
         m_map[key] = v;
