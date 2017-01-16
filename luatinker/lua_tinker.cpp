@@ -1,14 +1,14 @@
-ï»¿// lua_tinker.cpp
+// lua_tinker.cpp
 //
 // LuaTinker - Simple and light C++ wrapper for Lua.
 //
 // Copyright (c) 2005-2007 Kwon-il Lee (zupet@hitel.net)
 // 
 // please check Licence.txt file for licence and legal issues. 
-
+#include "luatinker/cjson/lua_cjson.h"
 #include <iostream>
-#include <lua.hpp>
 #include "luatinker/lua_tinker.h"
+
 
 // #if defined(_MSC_VER)
 //     #define I64_FMT "I64"
@@ -146,7 +146,7 @@
 //     lua_pushcclosure(L, tostring_u64, 0);
 //     lua_rawset(L, -3);
 // 
-//     // æ¯”è¾ƒåªä¼šä¸¤è¾¹å…ƒè¡¨éƒ½æ˜¯ç›¸åŒçš„å…ƒç´ æ‰ä¼šè¿›å…¥æ¯”è¾ƒ
+//     // ±È½ÏÖ»»áÁ½±ßÔª±í¶¼ÊÇÏàÍ¬µÄÔªËØ²Å»á½øÈë±È½Ï
 //     lua_pushstring(L, "__eq");
 //     lua_pushcclosure(L, eq_u64, 0);
 //     lua_rawset(L, -3);  
@@ -159,13 +159,17 @@
 //     lua_pushcclosure(L, le_u64, 0);
 //     lua_rawset(L, -3);  
 // 
-//     // __concat, __addç­‰åªè¦æ˜¯å…¶ä¸­ä¸€ä¸ªå…ƒç´ çš„å…ƒè¡¨å±äºè¯¥å…ƒè¡¨å°±ä¼šè¿›å…¥
+//     // __concat, __addµÈÖ»ÒªÊÇÆäÖĞÒ»¸öÔªËØµÄÔª±íÊôÓÚ¸ÃÔª±í¾Í»á½øÈë
 //     //lua_pushstring(L, "__concat");
 //     //lua_pushcclosure(L, concat_u64, 0);
 //     //lua_rawset(L, -3);
 // 
 //     lua_setglobal(L, name);
 // }
+
+const char* lua_tinker::version(){
+  return  LUA_RELEASE;
+}
 
 /*---------------------------------------------------------------------------*/ 
 /* excution                                                                  */ 
@@ -202,6 +206,7 @@ void lua_tinker::openLuaLib(lua_State* L, const char* name, lua_CFunction fun) {
 void lua_tinker::openLuaLibs(lua_State* L) {
   luaopen_base(L);
   luaL_openlibs(L);
+  openLuaLib(L, "cjson", luaopen_cjson);
 }
 
 /*---------------------------------------------------------------------------*/ 
@@ -474,7 +479,14 @@ unsigned long long lua_tinker::read(lua_State *L, int index)
 template<>
 lua_tinker::table lua_tinker::read(lua_State *L, int index)
 {
+    //assert(lua_istable(L, index));
     return table(L, index);
+}
+template<>
+lua_tinker::nil lua_tinker::read(lua_State *L, int index){
+ 
+  //print_error(L, "c++ read a nil value");
+  return nil(lua_isnil(L, index));
 }
 
 /*---------------------------------------------------------------------------*/ 
@@ -612,7 +624,17 @@ void lua_tinker::push(lua_State *L, unsigned long long ret)
 template<>
 void lua_tinker::push(lua_State *L, lua_tinker::table ret)
 {
-    lua_pushvalue(L, ret.m_obj->m_index);
+    if(!ret.m_nil)
+    {
+      lua_pushvalue(L, ret.m_obj->m_index); 
+    }
+    else{ 
+      lua_pushnil(L); 
+    }
+}
+template<> 
+void lua_tinker::push(lua_State *L, nil /*ret*/){
+  lua_pushnil(L);
 }
 
 /*---------------------------------------------------------------------------*/ 
@@ -657,49 +679,49 @@ static void invoke_parent(lua_State *L)
 /*---------------------------------------------------------------------------*/ 
 int lua_tinker::meta_get(lua_State *L)
 {
-    // ä¼ å…¥è¡¨ å’Œ ç´¢å¼•å‚æ•°
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 
+    // ´«Èë±í ºÍ Ë÷Òı²ÎÊı
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 
     lua_getmetatable(L,1);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table)
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table)
     lua_pushvalue(L,2);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.å˜é‡(string)
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.±äÁ¿(string)
     lua_rawget(L,-2);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.meta[å˜é‡]valueå€¼(userdata)
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.meta[±äÁ¿]valueÖµ(userdata)
 
-    // å¦‚æœå­˜åœ¨userdata å­˜åœ¨è¯¥å˜é‡
+    // Èç¹û´æÔÚuserdata ´æÔÚ¸Ã±äÁ¿
     if(lua_isuserdata(L,-1))
     {
         user2type<var_base*>::invoke(L,-1)->get(L);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.meta[å˜é‡]valueå€¼(userdata) 5.å®é™…å€¼
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.meta[±äÁ¿]valueÖµ(userdata) 5.Êµ¼ÊÖµ
         lua_remove(L, -2);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.å®é™…å€¼
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.Êµ¼ÊÖµ
     }
     else if(lua_isnil(L,-1))
     {
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.nil
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.nil
         lua_remove(L,-1);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 
         invoke_parent(L);
         // fix bug by fergus
-        // è°ƒç”¨çˆ¶ç±»ä¹Ÿéœ€è°ƒç”¨get
+        // µ÷ÓÃ¸¸ÀàÒ²Ğèµ÷ÓÃget
         if(lua_isuserdata(L,-1))
         {
-            // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.çˆ¶ç±»ä¸­çš„å˜é‡(userdata) 
+            // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.¸¸ÀàÖĞµÄ±äÁ¿(userdata) 
             user2type<var_base*>::invoke(L,-1)->get(L);
-            // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.çˆ¶ç±»ä¸­çš„å˜é‡(userdata) 5.å®é™…å€¼
+            // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.¸¸ÀàÖĞµÄ±äÁ¿(userdata) 5.Êµ¼ÊÖµ
             lua_remove(L, -2);
-            // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.å®é™…å€¼
+            // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.Êµ¼ÊÖµ
         }
         else if(lua_isnil(L,-1))
         {
-            // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.meta(table) 4.nil
+            // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.meta(table) 4.nil
             lua_pushfstring(L, "can't find '%s' class variable. (forgot registering class variable ?)", lua_tostring(L, 2));
             lua_error(L);
         }
     } 
 
     lua_remove(L,-2);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.å®é™…å€¼
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Êµ¼ÊÖµ
 
     return 1;
 }
@@ -707,43 +729,43 @@ int lua_tinker::meta_get(lua_State *L)
 /*---------------------------------------------------------------------------*/ 
 int lua_tinker::meta_set(lua_State *L)
 {
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ
     lua_getmetatable(L,1);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table)
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table)
     lua_pushvalue(L,2);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.å˜é‡(string)
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.±äÁ¿(string)
     lua_rawget(L,-2);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.meta[å˜é‡](userdata mem_varæŒ‡é’ˆ)
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.meta[±äÁ¿](userdata mem_varÖ¸Õë)
 
     if(lua_isuserdata(L,-1))
     {
         user2type<var_base*>::invoke(L,-1)->set(L);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.meta[å˜é‡](userdata mem_varæŒ‡é’ˆ)
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.meta[±äÁ¿](userdata mem_varÖ¸Õë)
     }
     else if(lua_isnil(L, -1))
     {
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.nil
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.nil
         lua_remove(L,-1);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table)
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table)
         lua_pushvalue(L,2);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.å˜é‡(string)
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.±äÁ¿(string)
         lua_pushvalue(L,4);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.å˜é‡(string) 6.ç±»meta(table)
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.±äÁ¿(string) 6.Ààmeta(table)
         invoke_parent(L);
-        // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.å˜é‡(string) 6.ç±»meta(table) 7.è·å–åˆ°çˆ¶ç±»çš„å˜é‡(userdata mem_varæŒ‡é’ˆ)
+        // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.±äÁ¿(string) 6.Ààmeta(table) 7.»ñÈ¡µ½¸¸ÀàµÄ±äÁ¿(userdata mem_varÖ¸Õë)
         if(lua_isuserdata(L,-1))
         {
             user2type<var_base*>::invoke(L,-1)->set(L);
         }
         else if(lua_isnil(L,-1))
         {
-            // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼ 4.ç±»meta(table) 5.å˜é‡(string) 6.ç±»meta(table) 7.nil
+            // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ 4.Ààmeta(table) 5.±äÁ¿(string) 6.Ààmeta(table) 7.nil
             lua_pushfstring(L, "can't find '%s' class variable. (forgot registering class variable ?)", lua_tostring(L, 2));
             lua_error(L);
         }
     }
     lua_settop(L, 3);
-    // stack: 1.ç±»(userdata) 2.å˜é‡(string) 3.è¦èµ‹çš„å€¼
+    // stack: 1.Àà(userdata) 2.±äÁ¿(string) 3.Òª¸³µÄÖµ
     return 0;
 }
 
@@ -759,7 +781,7 @@ void lua_tinker::push_meta(lua_State *L, const char* name)
 lua_tinker::table_obj::table_obj(lua_State* L, int index)
     :m_L(L)
     ,m_index(index)
-    ,m_ref(0)
+    /*,m_ref(0)*/
 {
     if(lua_isnil(m_L, m_index))
     {
@@ -780,16 +802,16 @@ lua_tinker::table_obj::~table_obj()
     }
 }
 
-void lua_tinker::table_obj::inc_ref()
-{
-    ++m_ref;
-}
+// void lua_tinker::table_obj::inc_ref()
+// {
+//    /* ++m_ref;*/
+// }
 
-void lua_tinker::table_obj::dec_ref()
-{
-    if(--m_ref == 0)
-        delete this;
-}
+// void lua_tinker::table_obj::dec_ref()
+// {
+// //     if(--m_ref == 0)
+// //         delete this;
+// }
 
 bool lua_tinker::table_obj::validate()
 {
@@ -825,16 +847,22 @@ bool lua_tinker::table_obj::validate()
 /*---------------------------------------------------------------------------*/ 
 /* Table Object Holder                                                       */ 
 /*---------------------------------------------------------------------------*/ 
-lua_tinker::table::table(lua_State* L)
+lua_tinker::table::table(lua_State* L) : m_nil(false)
 {
     lua_newtable(L);
 
-    m_obj = new table_obj(L, lua_gettop(L));
+    m_obj = std::make_shared<table_obj>(L, lua_gettop(L));
 
-    m_obj->inc_ref();
+   
+
+   /* m_obj->inc_ref();*/
 }
 
-lua_tinker::table::table(lua_State* L, const char* name)
+lua_tinker::table::table() : m_nil(true){
+   m_obj = nullptr;
+}
+
+lua_tinker::table::table(lua_State* L, const char* name) : m_nil(false)
 {
     lua_getglobal(L, name);
 
@@ -847,33 +875,38 @@ lua_tinker::table::table(lua_State* L, const char* name)
         lua_getglobal(L, name);
     }
 
-    m_obj = new table_obj(L, lua_gettop(L));
+    m_obj = std::make_shared<table_obj>(L, lua_gettop(L));
 
-    m_obj->inc_ref();
+ 
+
+   /* m_obj->inc_ref();*/
 }
 
-lua_tinker::table::table(lua_State* L, int index)
+lua_tinker::table::table(lua_State* L, int index)   : m_nil(false)
 {
     if(index < 0)
     {
         index = lua_gettop(L) + index + 1;
     }
 
-    m_obj = new table_obj(L, index);
+    m_obj = std::make_shared<table_obj>(L, index);
 
-    m_obj->inc_ref();
+    
+
+   /* m_obj->inc_ref();*/
 }
 
-lua_tinker::table::table(const table& input)
+lua_tinker::table::table(const table& input) : m_nil(input.m_nil)
 {
     m_obj = input.m_obj;
 
-    m_obj->inc_ref();
+
+    /*m_obj->inc_ref();*/
 }
 
 lua_tinker::table::~table()
 {
-    m_obj->dec_ref();
+   /* m_obj->dec_ref();*/
 }
 
 /*---------------------------------------------------------------------------*/ 
